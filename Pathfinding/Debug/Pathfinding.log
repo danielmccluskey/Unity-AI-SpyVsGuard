@@ -1,50 +1,15 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Pathfinding.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  AudioComponent.cpp
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\components\source\audiocomponent.cpp(39): warning C4018: '<': signed/unsigned mismatch
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\components\source\audiocomponent.cpp(63): warning C4018: '<': signed/unsigned mismatch
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\components\source\audiocomponent.cpp(79): warning C4018: '<': signed/unsigned mismatch
-  BulletComponent.cpp
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\components\source\bulletcomponent.cpp(23): warning C4018: '<': signed/unsigned mismatch
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\components\source\bulletcomponent.cpp(45): warning C4018: '<': signed/unsigned mismatch
-  Component.cpp
-  Enemy.cpp
-  Entity.cpp
-  TransformComponent.cpp
   main.cpp
 c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\shader.h(67): warning C4101: 'infoLog': unreferenced local variable
 c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\shader.h(66): warning C4101: 'success': unreferenced local variable
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(95): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(170): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(171): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(175): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(176): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(178): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(97): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(179): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(188): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-  glad.c
-glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(context.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(init.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(input.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(vulkan.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(window.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_init.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_joystick.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_monitor.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_time.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_tls.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_tls.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_window.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(wgl_context.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
-glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(egl_context.obj)' or at 'C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\glfw.pdb'; linking object as if no debug info
+c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(180): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(184): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(185): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(187): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(188): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\betat\desktop\ai\assignmentrepo\ct6024-ai\pathfinding\main.cpp(197): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Pathfinding.vcxproj -> C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\Debug\PRJ_AssimpModelLoader.exe
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmod\lib\fmod.dll
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmod\lib\fmod64.dll
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmod\lib\fmodL.dll
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmod\lib\fmodL64.dll
-  4 File(s) copied
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmodstudio\lib\fmodstudio.dll
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmodstudio\lib\fmodstudio64.dll
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmodstudio\lib\fmodstudioL.dll
-  C:\Users\Betat\Desktop\AI\AssignmentRepo\CT6024-AI\lib\fmodstudio\lib\fmodstudioL64.dll
-  4 File(s) copied
+  0 File(s) copied
+  0 File(s) copied

@@ -77,6 +77,8 @@ int main()
 	// -------------------------
 	Shader ourShader("../../resources/shaders/1.model_loading.vs"
 		, "../../resources/shaders/1.model_loading.fs");
+	Shader ourShader2("../../resources/shaders/1.model_loading.vs"
+		, "../../resources/shaders/1.model_loading.fs");
 
 	// load models
 	// -----------
@@ -84,7 +86,7 @@ int main()
 	Model ourModel2("../../resources/objects/nanosuit/nanosuit.obj");
 
 	// draw in wireframe
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	// render loop
 	// -----------
@@ -120,8 +122,15 @@ int main()
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));	// it's a bit too big for our scene, so scale it down
 		ourShader.setMat4("model", model);
+		ourShader2.setMat4("model", model);
 		ourModel.Draw(ourShader);
-		ourModel2.Draw(ourShader);
+
+		model = glm::translate(model, glm::vec3(0.0f, 200.0f, 0.0f)); // translate it down so it's at the center of the scene
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+
+		ourShader2.setMat4("model", model);
+
+		ourModel2.Draw(ourShader2);
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 		// -------------------------------------------------------------------------------

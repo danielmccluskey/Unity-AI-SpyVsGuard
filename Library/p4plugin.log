@@ -1,0 +1,134 @@
+p1:-1 0 Change 6471 created with 2 open file(s).
+p1:-1 0 Submitting change 6471.
+p1:-1 0 Locking 2 files ...
+p1:-1 0 edit //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/WasICaught.cs#2
+p1:-1 0 edit //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/WasICaught.cs.meta#2
+p1:-1 0 Change 6471 submitted.
+p1:-1 0 Change 6472 created with 2 open file(s).
+p1:-1 0 Submitting change 6472.
+p1:-1 0 Locking 2 files ...
+p1:-1 0 edit //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/WasICaught.cs#3
+p1:-1 0 edit //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/WasICaught.cs.meta#3
+p1:-1 0 Change 6472 submitted.
+p1:-1 0 Change 6473 created with 65 open file(s).
+p1:-1 0 Submitting change 6473.
+p1:-1 0 Locking 65 files ...
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Action.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Action.cs.meta#4
+p1:-1 0 add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Action.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Action.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/AmIIt.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/AmIIt.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/BehaviourTree.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/BehaviourTree.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Brain.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Brain.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/BTTag.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/BTTag.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Chase.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Chase.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Composite.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Composite.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Condition.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Condition.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Decorator.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Decorator.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Flee.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Flee.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Node.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Node.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Selector.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Selector.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Sequence.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Sequence.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Wait.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Wait.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Wander.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/Wander.cs.meta#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/WasICaught.cs#1
+p1:-1 0 move/add //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AI/WasICaught.cs.meta#1
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AmIIt.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/AmIIt.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/BehaviourTree.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/BehaviourTree.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Brain.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Brain.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/BTTag.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/BTTag.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Chase.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Chase.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Composite.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Composite.cs.meta#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Condition.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Condition.cs.meta#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Decorator.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Decorator.cs.meta#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Flee.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Flee.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Node.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Node.cs.meta#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Selector.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Selector.cs.meta#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Sequence.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Sequence.cs.meta#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Wait.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Wait.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Wander.cs#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/Wander.cs.meta#2
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/WasICaught.cs#4
+p1:-1 0 move/delete //depot/Staff/wmasek/AI/UnityBT/UnityBTs/Assets/Scripts/WasICaught.cs.meta#4
+p1:-1 0 Change 6473 submitted.
+e32:TCP receive failed.\nread: socket: WSAECONNRESET\n
+Password invalid.
+
+Password invalid.
+
+Password invalid.
+
+Password invalid.
+
+Password invalid.
+
+Password invalid.
+
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/AI/UnityBT/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/AI/UnityBT/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/AI/UnityBT/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/AI/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/AI/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/AI/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n
+Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+Error: Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\testForProjectRootMapping' is not under client's root 'C:\p4_uog'.
+
+e32:Path 'C:/OD/OneDrive - University of Gloucestershire/Current Projects/UnityBTs\\testForProjectRootMapping' is not under client's root 'C:\\p4_uog'.\n

@@ -16,7 +16,7 @@ public abstract class CS_GOAPAction : MonoBehaviour
     private bool m_bInRange = false;//Is the agent in range to perform this action?
 
     [SerializeField]
-    public float m_fCost = 1.0f;//The cost of using this action
+    public float m_fCost = 1.0f;//The m_fCost of using this action
 
     [SerializeField]
     public GameObject m_goTarget;//The target to perform this action on

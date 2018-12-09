@@ -146,7 +146,7 @@ public class CS_GOAPPlanner
     /// <returns></returns>
     protected bool GoalIsInState(HashSet<KeyValuePair<string, object>> a_kvpGoal, HashSet<KeyValuePair<string, object>> a_kvpState)
     {
-        bool bIsInState = true;
+        bool bIsInState = false;
         foreach (KeyValuePair<string, object> kvpGoal in a_kvpGoal)
         {
             foreach (KeyValuePair<string, object> kvpState in a_kvpState)

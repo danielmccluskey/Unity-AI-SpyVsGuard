@@ -61,6 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\AITypes\Components\CS_DistractionComponent.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Components\CS_EscapePointComponent.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Components\CS_RadioComponent.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Components\CS_TotemComponent.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_Guard.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_GuardAttackAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_GuardInvestigateAction.cs" />
@@ -68,6 +72,13 @@
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_GuardPatrolManager.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_GuardSeePlayerAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_GuardSight.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\CS_Spy.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\CS_SpyAvoidGuardAction.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\CS_SpyEscapeAction.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\CS_SpyFindCoverAction.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\CS_SpyGetTotemAction.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\CS_SpySight.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\CS_SpyTurnOnRadioAction.cs" />
     <Compile Include="Assets\Scripts\AI\CS_AIAgent.cs" />
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_FinateStateMachine.cs" />
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_GOAPAction.cs" />

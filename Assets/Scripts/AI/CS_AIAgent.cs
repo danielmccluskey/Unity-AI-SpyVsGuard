@@ -85,6 +85,16 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
             transform.rotation = Quaternion.Slerp(transform.rotation, qRotation, 0.005f);
         }
 
+        if (GetComponent<CS_GuardSight>() != null)
+        {
+            if (GetComponent<CS_GuardSight>().m_bCanSeePlayer == true)//Quick interrupt for if the guard sees an enemy whilst moving.
+            {
+                a_NextAction.SetInRange(true);
+
+                return true;
+            }
+        }
+
         if (fDistance <= m_fArrivalDistance)//If I have arrived
         {
             a_NextAction.SetInRange(true);

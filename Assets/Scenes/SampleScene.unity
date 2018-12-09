@@ -490,8 +490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   m_fAgrroDistance: 100
-  m_fArrivalDistance: 12.75
-  m_PatrolPointsHolder: {fileID: 1793394508}
+  m_fArrivalDistance: 1
+  m_PatrolPointsTarget: {fileID: 0}
   m_bSeesPlayer: 0
 --- !u!114 &631819438
 MonoBehaviour:
@@ -1083,12 +1083,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1793394508 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2112976215245257474, guid: 9c8744c7d412cad4087751af015260bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2112976215679695950}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1816173687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1250,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1216814306967834, guid: 33de1d51949acc64a9d672a37a1fe8b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114454589927692956, guid: 33de1d51949acc64a9d672a37a1fe8b8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 33de1d51949acc64a9d672a37a1fe8b8, type: 3}
@@ -1411,11 +1409,12 @@ GameObject:
   - component: {fileID: 195711564812365700}
   - component: {fileID: 54652819897197160}
   - component: {fileID: 1216815014764711}
+  - component: {fileID: 1216815014764712}
   - component: {fileID: 631819432}
   - component: {fileID: 631819438}
-  - component: {fileID: 1216815014764712}
   - component: {fileID: 1216815014764714}
   - component: {fileID: 1216815014764713}
+  - component: {fileID: 1216815014764715}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -1444,11 +1443,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216815014764710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 356283e3995501e4ba7ad8a7b562a05e, type: 3}
+  m_Script: {fileID: 11500000, guid: d5c9e915838519c46b4a19f525e6c625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 3
-  target: {fileID: 0}
+  m_lPatrolPointList: []
+  m_iAmountOfPatrolPoints: 3
+  m_fPatrolRange: 10
 --- !u!114 &1216815014764713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,6 +1485,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 1
   target: {fileID: 0}
+--- !u!114 &1216815014764715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216815014764710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356283e3995501e4ba7ad8a7b562a05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  target: {fileID: 0}
 --- !u!4 &4496991079728602
 Transform:
   m_ObjectHideFlags: 0
@@ -1493,7 +1507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216815014764710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.86, y: 1, z: -18.31}
+  m_LocalPosition: {x: 2.86, y: 1, z: -24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

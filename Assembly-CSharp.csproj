@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Guard\GuardAttackAction.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Guard\GuardInvestigateAction.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Guard\GuardPatrolAction.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Guard\GuardPatrolManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Guard\GuardSeePlayerAction.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Guard\GuardSight.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Spy\Spy.cs" />

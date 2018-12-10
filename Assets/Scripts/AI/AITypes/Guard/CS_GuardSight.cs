@@ -9,6 +9,7 @@ using UnityEngine;
 public class CS_GuardSight : MonoBehaviour
 {
     public bool m_bCanSeePlayer = false;
+    public bool m_bCouldSeePlayer = false;
     private Transform m_tPlayersLastKnownPosition;
     private bool m_bShouldBeInvestigating = false;
 
@@ -49,16 +50,6 @@ public class CS_GuardSight : MonoBehaviour
 
         Collider[] cTargetsInViewRadius = Physics.OverlapSphere(transform.position, m_fViewRadius, m_lmTargetMask);
 
-        if (cTargetsInViewRadius.Length <= 0)
-        {
-            if (m_bShouldBeInvestigating)
-            {
-                GetComponent<CS_AIAgent>().m_bInterrupt = true;
-                GetComponent<CS_GuardPatrolManager>().InvestigateArea(m_tPlayersLastKnownPosition, m_iInvestigationEffort, m_fInvestigationRange);
-                m_bShouldBeInvestigating = false;
-            }
-        }
-
         for (int i = 0; i < cTargetsInViewRadius.Length; i++)
         {
             Transform target = cTargetsInViewRadius[i].transform;
@@ -73,11 +64,23 @@ public class CS_GuardSight : MonoBehaviour
                     if (target.CompareTag("Player"))
                     {
                         m_bCanSeePlayer = true;
+                        m_bCouldSeePlayer = true;
                         GetComponent<CS_AIAgent>().m_bInterrupt = true;
                         m_tPlayersLastKnownPosition = target;
                         m_bShouldBeInvestigating = true;
                     }
                 }
+            }
+        }
+
+        if (m_bCouldSeePlayer && !m_bCanSeePlayer)
+        {
+            if (m_bShouldBeInvestigating)
+            {
+                GetComponent<CS_AIAgent>().m_bInterrupt = true;
+                GetComponent<CS_GuardPatrolManager>().InvestigateArea(m_tPlayersLastKnownPosition, m_iInvestigationEffort, m_fInvestigationRange);
+                m_bShouldBeInvestigating = false;
+                m_bCouldSeePlayer = false;
             }
         }
     }

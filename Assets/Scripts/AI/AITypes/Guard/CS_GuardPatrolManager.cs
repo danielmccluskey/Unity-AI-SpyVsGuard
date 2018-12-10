@@ -213,6 +213,7 @@ public class CS_GuardPatrolManager : MonoBehaviour
             m_lOriginalPatrolPoints = new List<PatrolPoints>(m_lPatrolPointList);
         }
         m_bInvestigationMode = true;
+        m_fInvestigationTimer = m_fInvestigationTime;
         m_v3PatrolCenter = a_tPositionToInvestigate.position;
         m_lPatrolPointList.Clear();
         GeneratePositions(a_iAmountOfPoints, a_fRangeToInvestigate);

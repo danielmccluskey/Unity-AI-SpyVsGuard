@@ -28,9 +28,9 @@ GameObject:
   - component: {fileID: 114102463493422328}
   - component: {fileID: 114839280280039430}
   - component: {fileID: 114390103885775682}
-  - component: {fileID: 114859174826593886}
   - component: {fileID: 114843369078701716}
   - component: {fileID: 114978477039458300}
+  - component: {fileID: 114686556174258586}
   m_Layer: 11
   m_Name: Guard
   m_TagString: Guard
@@ -45,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538736436719412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.208856, y: 0.0004119873, z: -16.843382}
+  m_LocalPosition: {x: -6.42, y: 0.0004119873, z: -16.843382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lPatrolPointList: []
-  m_iAmountOfPatrolPoints: 4
+  m_iAmountOfPatrolPoints: 5
   m_fPatrolRange: 15
 --- !u!114 &114390103885775682
 MonoBehaviour:
@@ -119,6 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bCanSeePlayer: 0
+  m_bCouldSeePlayer: 0
+  m_iInvestigationEffort: 5
+  m_fInvestigationRange: 5
   m_fViewRadius: 9.91
   m_fViewAngle: 75
   m_lmTargetMask:
@@ -139,6 +142,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0430d6057bc51e34881f4834046d045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114686556174258586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538736436719412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ceebb5b8a944b4fa3730f2165b4695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bSpy: 0
 --- !u!114 &114839280280039430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,9 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 1
+  m_fCost: 100
   m_goTarget: {fileID: 0}
-  m_sActionName: 
+  m_sActionName: Patrolling
 --- !u!114 &114843369078701716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,21 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e356c1a8c8c8409b95d38b0c0bbe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114859174826593886
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538736436719412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16d01c91773716f44b623ced6737f6c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_bInRange: 0
-  m_fCost: 1
-  m_goTarget: {fileID: 0}
-  m_sActionName: 
 --- !u!114 &114904905125638378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
-  m_sActionName: 
+  m_sActionName: Attacking Player
 --- !u!136 &136061819862350366
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -238,7 +238,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 1200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

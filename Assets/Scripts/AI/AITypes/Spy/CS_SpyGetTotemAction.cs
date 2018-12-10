@@ -10,7 +10,7 @@ public class CS_SpyGetTotemAction : CS_GOAPAction
 
     public CS_SpyGetTotemAction()
     {
-        AddPreCondition("distractGuard", true);
+        AddPreCondition("knowsTotemLocation", true);
         AddEffect("getTotem", true);
         m_fCost = 1.0f;
     }

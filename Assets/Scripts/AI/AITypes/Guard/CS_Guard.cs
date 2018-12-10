@@ -14,8 +14,9 @@ public class CS_Guard : CS_AIAgent
     // Start is called before the first frame update
     private void Start()
     {
-        m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(0);
         m_PatrolPointsTarget = new GameObject("GuardTarget");
+
+        m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(0);
     }
 
     // Update is called once per frame

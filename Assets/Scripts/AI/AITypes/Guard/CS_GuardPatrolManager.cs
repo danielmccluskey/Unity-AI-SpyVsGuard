@@ -39,11 +39,21 @@ public class CS_GuardPatrolManager : MonoBehaviour
 
     private NavMeshAgent m_aAgentRef;
 
+    private void Awake()
+    {
+        m_lPatrolPointList = new List<PatrolPoints>();
+        PatrolPoints ppPlaceholders = new PatrolPoints();
+        for (int i = 0; i < m_iAmountOfPatrolPoints; i++)
+        {
+            m_lPatrolPointList.Add(ppPlaceholders);
+        }
+        m_aAgentRef = GetComponent<NavMeshAgent>();
+
+    }
     // Start is called before the first frame update
     private void Start()
     {
-        m_lPatrolPointList = new List<PatrolPoints>();
-        m_aAgentRef = GetComponent<NavMeshAgent>();
+
         ReCalculatePatrol();
     }
 
@@ -173,6 +183,7 @@ public class CS_GuardPatrolManager : MonoBehaviour
     public void ReCalculatePatrol()
     {
         m_v3PatrolCenter = transform.position;
+        m_lPatrolPointList.Clear();
         GeneratePositions();
         ChooseRoute();
     }

@@ -39,6 +39,13 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
         WorldData.Add(new KeyValuePair<string, object>("avoidGuard", false)); //to-do: change player's state for world data here
         WorldData.Add(new KeyValuePair<string, object>("distractGuard", false)); //to-do: change player's state for world data hereescapeArea
         WorldData.Add(new KeyValuePair<string, object>("escapeArea", false)); //to-do: change player's state for world data here
+        WorldData.Add(new KeyValuePair<string, object>("knowsTotemLocation", false)); //to-do: change player's state for world data here
+        WorldData.Add(new KeyValuePair<string, object>("foundIntel", false)); //to-do: change player's state for world data here
+
+
+
+
+        
         return WorldData;
     }
 

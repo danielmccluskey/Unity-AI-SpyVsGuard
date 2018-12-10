@@ -13,14 +13,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114309973755974034}
-  - {fileID: 114372500021612764}
+  - {fileID: 114917251844232328}
   EditorEvents:
   - {fileID: 114702135788233698}
   MasterBanks:
   - {fileID: 114372500021612764}
+  - {fileID: 114917251844232328}
   StringsBanks:
   - {fileID: 114309973755974034}
-  stringsBankWriteTime: 636799945881644863
+  stringsBankWriteTime: 636800346644275588
   cacheVersion: 3
 --- !u!114 &114309973755974034
 MonoBehaviour:
@@ -34,7 +35,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMODProject\CT6018AIDMCC\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636799945881644863
+  lastModified: 636800346644275588
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -58,7 +59,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 64960
-  Exists: 1
+  Exists: 0
 --- !u!114 &114702135788233698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ MonoBehaviour:
   Path: event:/RadioEvent
   guid: 1efa066bdcdc2049b9050572897ce872
   Banks:
-  - {fileID: 114372500021612764}
+  - {fileID: 114917251844232328}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -81,3 +82,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6597
+--- !u!114 &114917251844232328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\s1600056\Desktop\ai\CT6024-AI\Assets\FMODProject\CT6018AIDMCC\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636800346644255574
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 64960
+  Exists: 1

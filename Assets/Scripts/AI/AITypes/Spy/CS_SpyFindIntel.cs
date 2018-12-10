@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CS_SpyFindIntel : CS_GOAPAction {
-
+public class CS_SpyFindIntel : CS_GOAPAction
+{
     private bool m_bRequiresInRange = true;
 
     private bool m_bHasTotem = false;
@@ -35,7 +35,7 @@ public class CS_SpyFindIntel : CS_GOAPAction {
         CS_IntelComponent goTotem = (CS_IntelComponent)UnityEngine.GameObject.FindObjectOfType(typeof(CS_IntelComponent));
         m_goTarget = goTotem.gameObject;
 
-        if(!goTotem.GetComponent<CS_IntelNotifier>().HasBeenLocated())
+        if (!goTotem.GetComponent<CS_KnowledgeComponent>().HasBeenLocated())
         {
             return false;
         }

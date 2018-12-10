@@ -27,13 +27,16 @@ GameObject:
   - component: {fileID: 114262157090947294}
   - component: {fileID: 114442354523076166}
   - component: {fileID: 114091465891941502}
-  - component: {fileID: 114038411769646520}
+  - component: {fileID: 114346805957088412}
   - component: {fileID: 114918936373582190}
-  - component: {fileID: 114110977034986490}
-  - component: {fileID: 114200602266611080}
-  m_Layer: 0
+  - component: {fileID: 114255464953721386}
+  - component: {fileID: 114946725826111136}
+  - component: {fileID: 114531998868841434}
+  - component: {fileID: 114347963795378116}
+  - component: {fileID: 114972493816225898}
+  m_Layer: 9
   m_Name: Spy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,13 +47,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821691581665526}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.27, y: 1.38, z: 0}
+  m_LocalRotation: {x: 0, y: 0.9958607, z: -0, w: -0.090893075}
+  m_LocalPosition: {x: 1.66, y: 1.38, z: -10.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 190.43, z: 0}
 --- !u!23 &23415668715800098
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -93,17 +96,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821691581665526}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114038411769646520
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1821691581665526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d06e8aa453a48a04184854d96c7e87b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114091465891941502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +110,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
---- !u!114 &114110977034986490
+--- !u!114 &114255464953721386
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,20 +118,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1821691581665526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ed5e85f12664245980ff6aaa56f129, type: 3}
+  m_Script: {fileID: 11500000, guid: c43da3e3a3a49ea428853d2bc8f8b322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114200602266611080
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1821691581665526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16391bd607b50804198c464700253643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 1
+  m_goTarget: {fileID: 0}
 --- !u!114 &114262157090947294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -152,9 +136,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_iHealth: 0
+  m_bInterrupt: 0
+  m_bKnowsTotemLocation: 0
   m_fAggroDistance: 1000
-  m_fArrivalDistance: 1.5
+  m_fArrivalDistance: 2
+  m_PatrolPointsTarget: {fileID: 0}
   m_bSeesGuard: 0
+--- !u!114 &114346805957088412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413aa760659af27419301cc9b3eb8b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 1
+  m_goTarget: {fileID: 0}
+--- !u!114 &114347963795378116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdf8fa44fd92ed489eba85aa6510ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 100
+  m_goTarget: {fileID: 0}
 --- !u!114 &114382928585182114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,8 +193,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 1
+  m_fCost: 10
   m_goTarget: {fileID: 0}
+--- !u!114 &114531998868841434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c9e915838519c46b4a19f525e6c625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lPatrolPointList: []
+  m_iAmountOfPatrolPoints: 10
+  m_fPatrolRange: 100
 --- !u!114 &114918936373582190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,6 +223,43 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
+--- !u!114 &114946725826111136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9934d8309dfa045a7de9110ef04b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 1
+  m_goTarget: {fileID: 0}
+--- !u!114 &114972493816225898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ed5e85f12664245980ff6aaa56f129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bCanSeeGuard: 0
+  m_bCanSeeIntel: 0
+  m_bCanSeeTotem: 0
+  m_fViewRadius: 15
+  m_fViewAngle: 79
+  m_lmTargetMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  m_lmObstacleMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_ltVisibleTargets: []
 --- !u!136 &136045900281337016
 CapsuleCollider:
   m_ObjectHideFlags: 1

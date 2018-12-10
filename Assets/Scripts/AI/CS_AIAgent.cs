@@ -14,6 +14,7 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
     public int m_iHealth;
 
     public bool m_bInterrupt = false;
+    public bool m_bKnowsTotemLocation = false;
 
     public float m_fAggroDistance = 1000.0f;//Distance it can "see"
     public float m_fArrivalDistance = 1.5f;//How close the agent has to be to arrive at the target
@@ -41,11 +42,8 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
         WorldData.Add(new KeyValuePair<string, object>("escapeArea", false)); //to-do: change player's state for world data here
         WorldData.Add(new KeyValuePair<string, object>("knowsTotemLocation", false)); //to-do: change player's state for world data here
         WorldData.Add(new KeyValuePair<string, object>("foundIntel", false)); //to-do: change player's state for world data here
+        WorldData.Add(new KeyValuePair<string, object>("searchArea", false)); //to-do: change player's state for world data here
 
-
-
-
-        
         return WorldData;
     }
 
@@ -74,6 +72,9 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
 
     public void AbortPlan(CS_GOAPAction a_FailedAction)
     {
+        GetComponent<CS_GOAPAgent>().GetDataProviderInterface().AllActionsFinished();
+        a_FailedAction.ResetGA();
+        a_FailedAction.ResetAction();
     }
 
     /// <summary>
@@ -94,21 +95,14 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
             transform.rotation = Quaternion.Slerp(transform.rotation, qRotation, 0.005f);
         }
 
-        if (GetComponent<CS_GuardSight>() != null)
-        {
-            if (GetComponent<CS_GuardSight>().m_bCanSeePlayer == true)//Quick interrupt for if the guard sees an enemy whilst moving.
-            {
-                a_NextAction.SetInRange(true);
-
-                return true;
-            }
-        }
-
         if (m_bInterrupt)
         {
+            GetComponent<CS_GOAPAgent>().GetDataProviderInterface().AbortPlan(a_NextAction);
+
             AbortPlan(a_NextAction);
             m_bInterrupt = false;
-            return false;
+
+            return true;
         }
 
         if (fDistance <= m_fArrivalDistance)//If I have arrived

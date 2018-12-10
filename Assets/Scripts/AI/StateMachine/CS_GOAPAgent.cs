@@ -220,4 +220,9 @@ public class CS_GOAPAgent : MonoBehaviour
             AvailableActions.Add(Action);
         }
     }
+
+    public CS_IGOAP GetDataProviderInterface()
+    {
+        return DataProviderInterface;
+    }
 }

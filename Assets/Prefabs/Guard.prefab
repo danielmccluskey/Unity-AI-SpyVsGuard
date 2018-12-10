@@ -31,7 +31,7 @@ GameObject:
   - component: {fileID: 114859174826593886}
   - component: {fileID: 114843369078701716}
   - component: {fileID: 114978477039458300}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bCanSeePlayer: 0
-  m_fViewRadius: 7.91
+  m_fViewRadius: 9.91
   m_fViewAngle: 75
   m_lmTargetMask:
     serializedVersion: 2
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_iHealth: 0
+  m_bInterrupt: 0
   m_fAggroDistance: 1000
   m_fArrivalDistance: 1.5
   m_PatrolPointsTarget: {fileID: 0}

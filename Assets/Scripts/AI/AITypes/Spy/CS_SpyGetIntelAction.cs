@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CS_SpyGetIntelAction : CS_GOAPAction {
-
+public class CS_SpyGetIntelAction : CS_GOAPAction
+{
     private bool m_bRequiresInRange = true;
 
     private bool m_bHasIntel = false;
@@ -33,9 +33,7 @@ public class CS_SpyGetIntelAction : CS_GOAPAction {
 
     public override bool CheckPreCondition(GameObject agent)
     {
-        CS_IntelNotifier goIntel = (CS_IntelNotifier)UnityEngine.GameObject.FindObjectOfType(typeof(CS_IntelNotifier));
-        
-
+        CS_KnowledgeComponent goIntel = (CS_KnowledgeComponent)UnityEngine.GameObject.FindObjectOfType(typeof(CS_KnowledgeComponent));
 
         m_goTarget = goIntel.gameObject;
 
@@ -51,7 +49,7 @@ public class CS_SpyGetIntelAction : CS_GOAPAction {
     {
         m_bHasIntel = true;
 
-        m_goTarget.GetComponent<CS_IntelNotifier>().SetCollected(true);
+        m_goTarget.GetComponent<CS_KnowledgeComponent>().SetCollected(true);
         return true;
     }
 }

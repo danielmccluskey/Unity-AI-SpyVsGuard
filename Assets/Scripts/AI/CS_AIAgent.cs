@@ -13,6 +13,8 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
     [HideInInspector]
     public int m_iHealth;
 
+    public bool m_bInterrupt = false;
+
     public float m_fAggroDistance = 1000.0f;//Distance it can "see"
     public float m_fArrivalDistance = 1.5f;//How close the agent has to be to arrive at the target
 
@@ -93,6 +95,13 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
 
                 return true;
             }
+        }
+
+        if (m_bInterrupt)
+        {
+            AbortPlan(a_NextAction);
+            m_bInterrupt = false;
+            return false;
         }
 
         if (fDistance <= m_fArrivalDistance)//If I have arrived

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114309973755974034}
+  - {fileID: 114372500021612764}
+  EditorEvents:
+  - {fileID: 114702135788233698}
+  MasterBanks:
+  - {fileID: 114372500021612764}
+  StringsBanks:
+  - {fileID: 114309973755974034}
+  stringsBankWriteTime: 636799945881644863
+  cacheVersion: 3
+--- !u!114 &114309973755974034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\FMODProject\CT6018AIDMCC\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636799945881644863
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 768
+  Exists: 1
+--- !u!114 &114372500021612764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Betat\Documents\GitHub\CT6024-AI\Assets\FMODProject\CT6018AIDMCC\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636799945881595007
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 64960
+  Exists: 1
+--- !u!114 &114702135788233698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/RadioEvent
+  guid: 1efa066bdcdc2049b9050572897ce872
+  Banks:
+  - {fileID: 114372500021612764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6597

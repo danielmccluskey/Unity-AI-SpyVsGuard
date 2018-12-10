@@ -72,6 +72,7 @@ public class CS_SpyTurnOnRadioAction : CS_GOAPAction
     public override bool PerformAction(GameObject agent)
     {
         m_bGuardDistracted = true;
+        m_goTarget.GetComponent<CS_Radio>().SetRadioStatus(true);
         return true;
     }
 }

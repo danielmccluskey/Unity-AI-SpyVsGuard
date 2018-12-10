@@ -421,6 +421,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114390103885775682, guid: 7d4fff4c92742644fad01efd3a666c60,
+        type: 2}
+      propertyPath: m_fViewRadius
+      value: 9.91
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
   m_IsPrefabAsset: 0
@@ -580,6 +585,10 @@ Prefab:
       propertyPath: m_bInRange
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821691581665526, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114038411769646520, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
     - {fileID: 114110977034986490, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
@@ -717,6 +726,7 @@ GameObject:
   - component: {fileID: 1570458383}
   - component: {fileID: 1570458382}
   - component: {fileID: 1570458381}
+  - component: {fileID: 1570458384}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -778,32 +788,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570458380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -6.61, y: 1, z: 13.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1633951654 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1821691581665526, guid: d34b2e6f26e7e72418613261e510ad01,
-    type: 2}
-  m_PrefabInternal: {fileID: 1144557661}
---- !u!54 &1633951655
-Rigidbody:
+--- !u!114 &1570458384
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1633951654}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_GameObject: {fileID: 1570458380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1867298218
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +818,8 @@ GameObject:
   - component: {fileID: 1867298222}
   - component: {fileID: 1867298221}
   - component: {fileID: 1867298220}
+  - component: {fileID: 1867298225}
+  - component: {fileID: 1867298224}
   m_Layer: 10
   m_Name: Radio
   m_TagString: Untagged
@@ -901,6 +905,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1867298218}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1867298224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867298218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099e0d1eaf1c181499f2a88387ff3d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bPlaySound: 0
+--- !u!114 &1867298225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867298218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21ec80c333455b4199c0aaeba4fd681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iCurrentRadioTrack: 0
+  fVolume: 1
+  SpeakerLocation: {fileID: 1867298218}
+  SoundTracksToPlay:
+  - event:/RadioEvent
+  bRadiosActivated: 00
 --- !u!1 &1916365714
 GameObject:
   m_ObjectHideFlags: 0

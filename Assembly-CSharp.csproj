@@ -61,6 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
+    <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
+    <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
+    <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Components\CS_DistractionComponent.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Components\CS_EscapePointComponent.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Components\CS_RadioComponent.cs" />
@@ -86,6 +90,25 @@
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_GOAPPlanner.cs" />
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_IFSMState.cs" />
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_IGOAP.cs" />
+    <Compile Include="Assets\Scripts\Radio\CS_Radio.cs" />
+    <Compile Include="Assets\Scripts\Radio\CS_SoundManager.cs" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\VCA\{4bdbb175-4bc1-43c7-a123-6ea51780835b}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Return\{b913d11c-fcd7-40ee-a837-398d09f6308d}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\BankFolder\{bd81e7e1-a549-4703-8328-f78844fea3d5}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Mixer.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\EncodingSetting\{5a188f30-26d3-4855-bd76-e64b519d957f}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Workspace.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\EffectPresetFolder\{56003239-a529-4bdd-b83c-2bb18bb4edf6}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\AudioFile\{838f8246-f52f-4378-b935-bf873d940a3f}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\EventFolder\{534082ce-bcde-4339-b805-29d0a2f68150}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\SnapshotGroup\{41f73426-fdba-4e97-89d3-b25b61b32c02}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Master.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Bank\{289ae5b3-d64c-4c87-9bdc-68f88f185e27}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Asset\{92ca9229-588d-4d40-ab49-3a246bb90e7a}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Tags.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Platform\{d4b706fa-d37f-4499-b701-71d74deb6088}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\ParameterPresetFolder\{2fd66e95-fd75-42cb-a6c2-84eb02ee15f6}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Event\{6b06fa1e-dcdc-4920-b905-0572897ce872}.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Betat/Documents/GitHub/CT6024-AI/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -329,6 +352,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{E29205FA-FCDB-1417-E6E6-0811E148D820}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

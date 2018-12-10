@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{838f8246-f52f-4378-b935-bf873d940a3f}">
+        <property name="assetPath">
+            <value>Radio Tune-SoundBible.com-1525681700.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>11.0249996</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>6.5975510204081633</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{92ca9229-588d-4d40-ab49-3a246bb90e7a}</destination>
+        </relationship>
+    </object>
+</objects>

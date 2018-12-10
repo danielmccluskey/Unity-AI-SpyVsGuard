@@ -10,7 +10,6 @@ public class CS_GuardAttackAction : CS_GOAPAction
 
     public CS_GuardAttackAction()
     {
-        AddPreCondition("seePlayer", true);
         AddEffect("damagePlayer", true);
         AddEffect("secureArea", true);
         m_fCost = 1.0f;
@@ -35,10 +34,15 @@ public class CS_GuardAttackAction : CS_GOAPAction
     public override bool CheckPreCondition(GameObject a_goAIAgent)
     {
         m_goTarget = GameObject.FindGameObjectWithTag("Player");
-        if (m_goTarget != null)
+
+        if (GetComponent<CS_GuardSight>().m_bCanSeePlayer)
         {
-            return true;
+            if (m_goTarget != null)
+            {
+                return true;
+            }
         }
+
         return false;
     }
 

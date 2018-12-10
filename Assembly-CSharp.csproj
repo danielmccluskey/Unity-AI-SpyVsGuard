@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_GOAPPlanner.cs" />
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_IFSMState.cs" />
     <Compile Include="Assets\Scripts\AI\StateMachine\CS_IGOAP.cs" />
+    <Compile Include="Assets\Scripts\Debug\CS_DebugText.cs" />
     <Compile Include="Assets\Scripts\Intel\CS_IntelSubscription.cs" />
     <Compile Include="Assets\Scripts\Intel\CS_KnowledgeComponent.cs" />
     <Compile Include="Assets\Scripts\Radio\CS_Radio.cs" />

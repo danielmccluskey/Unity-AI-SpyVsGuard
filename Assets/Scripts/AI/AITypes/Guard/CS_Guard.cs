@@ -33,6 +33,12 @@ public class CS_Guard : CS_AIAgent
         return goal;
     }
 
+    public void ResetPointsForInvestigating()
+    {
+        m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(0);
+        GetComponent<CS_AIAgent>().m_bInterrupt = true;
+    }
+
     public GameObject GetCurrentPatrolPoint()
     {
         m_PatrolPointsTarget.transform.position = m_ppCurrentPatrolPoint.m_v3PatrolPointPosition;

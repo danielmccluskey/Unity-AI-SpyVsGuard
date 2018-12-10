@@ -84,6 +84,8 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
     /// <returns></returns>
     public bool MoveAgentToAction(CS_GOAPAction a_NextAction)
     {
+        GetComponent<CS_DebugText>().ChangeCurrentActionText(a_NextAction.m_sActionName);
+
         float fDistance = Vector3.Distance(transform.position, a_NextAction.m_goTarget.transform.position);//Get distance to target
         if (fDistance < m_fAggroDistance)//If it is in aggro range
         {

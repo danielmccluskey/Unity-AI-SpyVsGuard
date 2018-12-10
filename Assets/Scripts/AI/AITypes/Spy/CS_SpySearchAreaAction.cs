@@ -52,6 +52,7 @@ public class CS_SpySearchAreaAction : CS_GOAPAction
     {
         m_bisSearching = true;
         GetComponent<CS_Spy>().NextSearchPoint();
+
         return true;
     }
 

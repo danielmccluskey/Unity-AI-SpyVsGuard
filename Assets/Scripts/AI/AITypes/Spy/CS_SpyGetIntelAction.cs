@@ -50,6 +50,8 @@ public class CS_SpyGetIntelAction : CS_GOAPAction
         m_bHasIntel = true;
 
         m_goTarget.GetComponent<CS_KnowledgeComponent>().SetCollected(true);
+
+        GetComponent<CS_DebugText>().ChangeCurrentActionText("Getting Intel");
         return true;
     }
 }

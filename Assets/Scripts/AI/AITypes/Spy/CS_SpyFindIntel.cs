@@ -51,6 +51,7 @@ public class CS_SpyFindIntel : CS_GOAPAction
     public override bool PerformAction(GameObject agent)
     {
         m_bHasTotem = true;
+
         return true;
     }
 }

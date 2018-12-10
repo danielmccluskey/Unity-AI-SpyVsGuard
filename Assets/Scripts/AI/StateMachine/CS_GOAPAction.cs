@@ -21,6 +21,8 @@ public abstract class CS_GOAPAction : MonoBehaviour
     [SerializeField]
     public GameObject m_goTarget;//The target to perform this action on
 
+    public string m_sActionName;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="CS_GOAPAction"/> class.
     /// </summary>

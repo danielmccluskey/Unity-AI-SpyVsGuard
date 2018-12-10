@@ -8,6 +8,7 @@ public class CS_Spy : CS_AIAgent
     public GameObject m_PatrolPointsTarget;
 
     private PatrolPoints m_ppCurrentPatrolPoint;
+    private int m_iPatrolIndex;
     public bool m_bSeesGuard = false;
 
     // Start is called before the first frame update
@@ -37,6 +38,12 @@ public class CS_Spy : CS_AIAgent
 
     public void NextSearchPoint()
     {
+        m_iPatrolIndex++;
+        if (m_iPatrolIndex >= GetComponent<CS_GuardPatrolManager>().GetAmountOfPoints())
+        {
+            GetComponent<CS_GuardPatrolManager>().ReCalculatePatrol();
+            m_iPatrolIndex = 0;
+        }
         m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(m_ppCurrentPatrolPoint.m_iNextPatrolIndex);
     }
 }

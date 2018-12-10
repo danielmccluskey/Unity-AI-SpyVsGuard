@@ -25,15 +25,16 @@ GameObject:
   - component: {fileID: 195090053887241130}
   - component: {fileID: 114382928585182114}
   - component: {fileID: 114262157090947294}
+  - component: {fileID: 114531998868841434}
+  - component: {fileID: 114972493816225898}
+  - component: {fileID: 114859491441009360}
   - component: {fileID: 114442354523076166}
   - component: {fileID: 114091465891941502}
   - component: {fileID: 114346805957088412}
   - component: {fileID: 114918936373582190}
   - component: {fileID: 114255464953721386}
   - component: {fileID: 114946725826111136}
-  - component: {fileID: 114531998868841434}
   - component: {fileID: 114347963795378116}
-  - component: {fileID: 114972493816225898}
   m_Layer: 9
   m_Name: Spy
   m_TagString: Player
@@ -48,7 +49,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821691581665526}
   m_LocalRotation: {x: 0, y: 0.9958607, z: -0, w: -0.090893075}
-  m_LocalPosition: {x: 1.66, y: 1.38, z: -10.88}
+  m_LocalPosition: {x: -6.47, y: 1.38, z: -9.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,6 +111,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
+  m_sActionName: Escaping
 --- !u!114 &114255464953721386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,6 +126,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
+  m_sActionName: Getting Intel
 --- !u!114 &114262157090947294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,6 +159,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
+  m_sActionName: Finding Totem
 --- !u!114 &114347963795378116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +174,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 100
   m_goTarget: {fileID: 0}
+  m_sActionName: Searching Area
 --- !u!114 &114382928585182114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,6 +200,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 10
   m_goTarget: {fileID: 0}
+  m_sActionName: 
 --- !u!114 &114531998868841434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,7 +214,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_lPatrolPointList: []
   m_iAmountOfPatrolPoints: 10
-  m_fPatrolRange: 100
+  m_fPatrolRange: 200
+--- !u!114 &114859491441009360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ceebb5b8a944b4fa3730f2165b4695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bSpy: 1
 --- !u!114 &114918936373582190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,6 +241,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
+  m_sActionName: Getting Totem
 --- !u!114 &114946725826111136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,6 +256,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
+  m_sActionName: Finding Intel
 --- !u!114 &114972493816225898
 MonoBehaviour:
   m_ObjectHideFlags: 1

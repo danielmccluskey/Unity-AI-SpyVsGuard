@@ -29,6 +29,8 @@ public class CS_GuardPatrolManager : MonoBehaviour
 {
     public List<PatrolPoints> m_lPatrolPointList;
 
+    private List<PatrolPoints> m_lOriginalPatrolPoints;
+
     private Vector3 m_v3PatrolCenter;
 
     [SerializeField]
@@ -39,6 +41,10 @@ public class CS_GuardPatrolManager : MonoBehaviour
 
     private NavMeshAgent m_aAgentRef;
 
+    private bool m_bInvestigationMode = false;
+    private float m_fInvestigationTime = 10.0f;
+    private float m_fInvestigationTimer = 10.0f;
+
     private void Awake()
     {
         m_lPatrolPointList = new List<PatrolPoints>();
@@ -48,18 +54,26 @@ public class CS_GuardPatrolManager : MonoBehaviour
             m_lPatrolPointList.Add(ppPlaceholders);
         }
         m_aAgentRef = GetComponent<NavMeshAgent>();
-
     }
+
     // Start is called before the first frame update
     private void Start()
     {
-
         ReCalculatePatrol();
+        m_fInvestigationTimer = m_fInvestigationTime;
     }
 
     // Update is called once per frame
     private void Update()
     {
+        if (m_bInvestigationMode)
+        {
+            m_fInvestigationTimer -= Time.deltaTime;
+            if (m_fInvestigationTimer <= 0)
+            {
+                StopInvestigating();
+            }
+        }
     }
 
     private void ChooseRoute()
@@ -68,22 +82,17 @@ public class CS_GuardPatrolManager : MonoBehaviour
         //Set Index and Linked
 
         FindNearestUnusedNeighbor(1);
-        //for (int i = 0; i < m_iAmountOfPatrolPoints; i++)
-        //{
-        //    m_lPatrolPointList[i].m_iNextPatrolIndex = FindNearestUnusedNeighbor(i);
-        //    m_lPatrolPointList[i].m_bHasBeenLinked = true;
-        //}
     }
 
-    private void GeneratePositions()
+    private void GeneratePositions(int a_iAmountOfPoints, float a_fRange)
     {
-        for (int i = 0; i < m_iAmountOfPatrolPoints; i++)
+        for (int i = 0; i < a_iAmountOfPoints; i++)
         {
             PatrolPoints ppPatrolPlaceholder = new PatrolPoints();
             bool bCanReachTarget = false;
             while (bCanReachTarget == false)
             {
-                ppPatrolPlaceholder.SetRandomPos(m_v3PatrolCenter, m_fPatrolRange);
+                ppPatrolPlaceholder.SetRandomPos(m_v3PatrolCenter, a_fRange);
 
                 NavMeshPath nmpPath = new NavMeshPath();
                 m_aAgentRef.CalculatePath(ppPatrolPlaceholder.m_v3PatrolPointPosition, nmpPath);
@@ -182,10 +191,33 @@ public class CS_GuardPatrolManager : MonoBehaviour
 
     public void ReCalculatePatrol()
     {
+        m_bInvestigationMode = false;
         m_v3PatrolCenter = transform.position;
         m_lPatrolPointList.Clear();
-        GeneratePositions();
+        GeneratePositions(m_iAmountOfPatrolPoints, m_fPatrolRange);
         ChooseRoute();
+    }
+
+    public void StopInvestigating()
+    {
+        m_lPatrolPointList.Clear();
+        m_lPatrolPointList = new List<PatrolPoints>(m_lOriginalPatrolPoints);
+        m_bInvestigationMode = false;
+        m_fInvestigationTimer = m_fInvestigationTime;
+    }
+
+    public void InvestigateArea(Transform a_tPositionToInvestigate, int a_iAmountOfPoints, float a_fRangeToInvestigate)
+    {
+        if (!m_bInvestigationMode)
+        {
+            m_lOriginalPatrolPoints = new List<PatrolPoints>(m_lPatrolPointList);
+        }
+        m_bInvestigationMode = true;
+        m_v3PatrolCenter = a_tPositionToInvestigate.position;
+        m_lPatrolPointList.Clear();
+        GeneratePositions(a_iAmountOfPoints, a_fRangeToInvestigate);
+        ChooseRoute();
+        GetComponent<CS_Guard>().ResetPointsForInvestigating();
     }
 
     public PatrolPoints GetSinglePatrolPoint(int a_iIndex)
@@ -206,5 +238,16 @@ public class CS_GuardPatrolManager : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawSphere(ppPIQ.m_v3PatrolPointPosition, 1);
         }
+
+        if (m_bInvestigationMode)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(m_v3PatrolCenter, 1);
+        }
+    }
+
+    public int GetAmountOfPoints()
+    {
+        return m_lPatrolPointList.Count;
     }
 }

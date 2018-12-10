@@ -36,7 +36,7 @@ MonoBehaviour:
     Value: 0
   OverlaySettings:
   - Platform: 1
-    Value: 1
+    Value: 0
   - Platform: 2
     Value: 0
   LoggingSettings:
@@ -60,4 +60,6 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master Bank
-  Banks: []
+  - Master Bank
+  Banks:
+  - Master Bank

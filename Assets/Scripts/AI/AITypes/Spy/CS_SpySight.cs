@@ -95,4 +95,16 @@ public class CS_SpySight : MonoBehaviour
         }
         return new Vector3(Mathf.Sin(a_fAngleDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(a_fAngleDegrees * Mathf.Deg2Rad));
     }
+
+    public GameObject GetVisibleGuard()
+    {
+        foreach (Transform tTarget in m_ltVisibleTargets)
+        {
+            if (tTarget.CompareTag("Guard"))
+            {
+                return tTarget.gameObject;
+            }
+        }
+        return null;
+    }
 }

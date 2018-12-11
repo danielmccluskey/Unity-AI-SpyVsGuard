@@ -154,7 +154,7 @@ MonoBehaviour:
   m_iInvestigationEffort: 5
   m_bCanSeePlayer: 0
   m_bCouldSeePlayer: 0
-  m_fViewAngle: 75
+  m_fViewAngle: 131
   m_fViewRadius: 9.91
   m_lmObstacleMask:
     serializedVersion: 2

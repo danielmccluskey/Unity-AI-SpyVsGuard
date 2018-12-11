@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23597707951531852}
   - component: {fileID: 65881371942875366}
   - component: {fileID: 114315055571471782}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HidingSpot
   m_TagString: Intel
   m_Icon: {fileID: 0}

@@ -22,6 +22,7 @@ public class CS_SpyHideAction : CS_GOAPAction
     public CS_SpyHideAction()
     {
         AddEffect("avoidGuard", true);
+
         // m_fCost = 1.0f;
     }
 

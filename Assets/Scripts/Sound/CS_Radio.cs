@@ -27,5 +27,6 @@ public class CS_Radio : MonoBehaviour
 
     public void SetRadioStatus(bool a_bOn)
     {
+        m_bPlaySound = a_bOn;
     }
 }

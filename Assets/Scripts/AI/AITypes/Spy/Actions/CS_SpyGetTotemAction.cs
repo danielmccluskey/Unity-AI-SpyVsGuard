@@ -12,6 +12,8 @@ public class CS_SpyGetTotemAction : CS_GOAPAction
     {
         AddEffect("getTotem", true);
         AddPreCondition("knowsTotemLocation", true);
+        AddPreCondition("totemClearOfEnemies", true);
+
         //m_fCost = 1.0f;
     }
 

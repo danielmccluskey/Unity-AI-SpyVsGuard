@@ -10,7 +10,7 @@ public class CS_SpyTurnOnRadioAction : CS_GOAPAction
 
     public CS_SpyTurnOnRadioAction()
     {
-        AddEffect("distractGuard", true);
+        AddEffect("totemClearOfEnemies", true);
         // m_fCost = 1.0f;
     }
 
@@ -34,6 +34,8 @@ public class CS_SpyTurnOnRadioAction : CS_GOAPAction
     {
         CS_RadioComponent[] goDistractingObjects = (CS_RadioComponent[])UnityEngine.GameObject.FindObjectsOfType(typeof(CS_RadioComponent));
         CS_RadioComponent goClosestDistraction = null;
+
+        CS_TotemComponent cTotemRef = GameObject.FindObjectOfType<CS_TotemComponent>();
         float fDistanceToDistraction = 0;
         foreach (CS_RadioComponent distraction in goDistractingObjects)
         {
@@ -41,12 +43,12 @@ public class CS_SpyTurnOnRadioAction : CS_GOAPAction
             {
                 // first one, so choose it for now
                 goClosestDistraction = distraction;
-                fDistanceToDistraction = (distraction.gameObject.transform.position - agent.transform.position).magnitude;
+                fDistanceToDistraction = (distraction.gameObject.transform.position - cTotemRef.transform.position).magnitude;
             }
             else
             {
                 // is this one closer than the last?
-                float dist = (distraction.gameObject.transform.position - agent.transform.position).magnitude;
+                float dist = (distraction.gameObject.transform.position - cTotemRef.transform.position).magnitude;
                 if (dist < fDistanceToDistraction)
                 {
                     // we found a closer one, use it
@@ -73,6 +75,7 @@ public class CS_SpyTurnOnRadioAction : CS_GOAPAction
     {
         m_bGuardDistracted = true;
         m_goTarget.GetComponent<CS_Radio>().SetRadioStatus(true);
+        GameObject.FindObjectOfType<CS_Spy>().SetHide(true);
         return true;
     }
 }

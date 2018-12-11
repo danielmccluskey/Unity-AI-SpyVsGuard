@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\Sensory\CS_GuardHearing.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\Sensory\CS_GuardSight.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Spy\Actions\CS_SpyAvoidGuardAction.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Spy\Actions\CS_SpyEnemiesNearTotemAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Spy\Actions\CS_SpyEscapeAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Spy\Actions\CS_SpyGetIntelAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Spy\Actions\CS_SpyGetTotemAction.cs" />

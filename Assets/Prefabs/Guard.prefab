@@ -33,7 +33,6 @@ GameObject:
   - component: {fileID: 114195012267149394}
   - component: {fileID: 114978477039458300}
   - component: {fileID: 114686556174258586}
-  - component: {fileID: 114008481002919622}
   m_Layer: 11
   m_Name: Guard
   m_TagString: Guard
@@ -48,7 +47,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538736436719412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.38, y: 0.913, z: -16.843382}
+  m_LocalPosition: {x: -41.95, y: 0.913, z: -16.843382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,21 +110,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114008481002919622
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538736436719412}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3404ca68071a28743997200cd1e133ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_goGameObjectToSpawn: {fileID: 1916372707358834, guid: 05aad65fac7bc5749a45ae16ee692ee4,
-    type: 2}
-  m_v3Offset: {x: 3, y: -1.03, z: 0}
-  m_bRotate: 0
 --- !u!114 &114102463493422328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,12 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b41e9df418c1d4097d27c581260bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fInvestigationRange: 5
+  m_fInvestigationRange: 10
   m_iInvestigationEffort: 5
   m_bCanSeePlayer: 0
   m_bCouldSeePlayer: 0
   m_fViewAngle: 76
-  m_fViewRadius: 9.91
+  m_fViewRadius: 15
   m_lmObstacleMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -283,7 +267,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 1200

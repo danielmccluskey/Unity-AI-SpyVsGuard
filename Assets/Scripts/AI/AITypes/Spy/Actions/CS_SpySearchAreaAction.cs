@@ -11,7 +11,7 @@ public class CS_SpySearchAreaAction : CS_GOAPAction
     public CS_SpySearchAreaAction()
     {
         AddEffect("searchArea", true);
-        m_fCost = 1.0f;
+        //m_fCost = 1.0f;
     }
 
     public override void ResetGA()

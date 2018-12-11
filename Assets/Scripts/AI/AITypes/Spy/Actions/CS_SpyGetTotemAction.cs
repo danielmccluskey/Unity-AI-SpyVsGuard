@@ -10,9 +10,9 @@ public class CS_SpyGetTotemAction : CS_GOAPAction
 
     public CS_SpyGetTotemAction()
     {
-        AddPreCondition("knowsTotemLocation", true);
         AddEffect("getTotem", true);
-        m_fCost = 1.0f;
+        AddPreCondition("knowsTotemLocation", true);
+        //m_fCost = 1.0f;
     }
 
     public override void ResetGA()
@@ -36,7 +36,11 @@ public class CS_SpyGetTotemAction : CS_GOAPAction
         CS_TotemComponent goTotem = (CS_TotemComponent)UnityEngine.GameObject.FindObjectOfType(typeof(CS_TotemComponent));
         m_goTarget = goTotem.gameObject;
 
-        if (m_goTarget != null)
+        if (m_goTarget == null)
+        {
+            return false;
+        }
+        if (!m_goTarget.GetComponent<CS_KnowledgeComponent>().HasBeenCollected())
         {
             return true;
         }
@@ -47,6 +51,8 @@ public class CS_SpyGetTotemAction : CS_GOAPAction
     public override bool PerformAction(GameObject agent)
     {
         m_bHasTotem = true;
+        m_goTarget.GetComponent<CS_KnowledgeComponent>().SetCollected(true);
+
         return true;
     }
 }

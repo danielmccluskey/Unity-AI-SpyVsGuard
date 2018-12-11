@@ -10,9 +10,9 @@ public class CS_SpyGetIntelAction : CS_GOAPAction
 
     public CS_SpyGetIntelAction()
     {
-        AddPreCondition("foundIntel", true);
         AddEffect("knowsTotemLocation", true);
-        m_fCost = 1.0f;
+        AddEffect("getIntel", true);
+        // m_fCost = 1.0f;
     }
 
     public override void ResetGA()
@@ -33,11 +33,19 @@ public class CS_SpyGetIntelAction : CS_GOAPAction
 
     public override bool CheckPreCondition(GameObject agent)
     {
-        CS_KnowledgeComponent goIntel = (CS_KnowledgeComponent)UnityEngine.GameObject.FindObjectOfType(typeof(CS_KnowledgeComponent));
+        CS_IntelComponent goIntel = (CS_IntelComponent)UnityEngine.GameObject.FindObjectOfType(typeof(CS_IntelComponent));
 
         m_goTarget = goIntel.gameObject;
 
-        if (m_goTarget != null)
+        if (m_goTarget == null)
+        {
+            return false;
+        }
+        if (m_goTarget.GetComponent<CS_KnowledgeComponent>().HasBeenCollected())
+        {
+            return false;
+        }
+        if (m_goTarget.GetComponent<CS_KnowledgeComponent>().HasBeenLocated())
         {
             return true;
         }
@@ -51,7 +59,6 @@ public class CS_SpyGetIntelAction : CS_GOAPAction
 
         m_goTarget.GetComponent<CS_KnowledgeComponent>().SetCollected(true);
 
-        GetComponent<CS_DebugText>().ChangeCurrentActionText("Getting Intel");
         return true;
     }
 }

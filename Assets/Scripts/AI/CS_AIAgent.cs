@@ -44,6 +44,7 @@ public abstract class CS_AIAgent : MonoBehaviour, CS_IGOAP
         WorldData.Add(new KeyValuePair<string, object>("foundIntel", false)); //to-do: change player's state for world data here
         WorldData.Add(new KeyValuePair<string, object>("searchArea", false)); //to-do: change player's state for world data here
         WorldData.Add(new KeyValuePair<string, object>("turnOffRadio", false)); //to-do: change player's state for world data here
+        WorldData.Add(new KeyValuePair<string, object>("getIntel", false)); //to-do: change player's state for world data here
 
         return WorldData;
     }

@@ -79,10 +79,10 @@ public class CS_SpySight : MonoBehaviour
 
     private void HandleTotemSighting(GameObject a_goIntelInQuestion)
     {
-        CS_KnowledgeComponent[] cIntelList = GameObject.FindObjectsOfType<CS_KnowledgeComponent>();
-        foreach (CS_KnowledgeComponent cIntel in cIntelList)
+        CS_IntelComponent[] cIntelList = GameObject.FindObjectsOfType<CS_IntelComponent>();
+        foreach (CS_IntelComponent cIntel in cIntelList)
         {
-            cIntel.SetCollected(true);
+            cIntel.GetComponent<CS_KnowledgeComponent>().SetCollected(true);
         }
         a_goIntelInQuestion.GetComponent<CS_KnowledgeComponent>().SetFound(true);
     }

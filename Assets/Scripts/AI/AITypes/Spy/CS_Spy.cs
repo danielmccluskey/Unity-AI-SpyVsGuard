@@ -26,6 +26,7 @@ public class CS_Spy : CS_AIAgent
         goal.Add(new KeyValuePair<string, object>("escapeArea", true));
         goal.Add(new KeyValuePair<string, object>("avoidGuard", true));
         goal.Add(new KeyValuePair<string, object>("searchArea", true));
+        goal.Add(new KeyValuePair<string, object>("getIntel", true));
 
         return goal;
     }

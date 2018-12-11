@@ -6,7 +6,7 @@ public class CS_HidingComponent : MonoBehaviour
 {
     public bool m_bActive = true;
 
-    private float m_fDeactiveTime = 10.0f;
+    private float m_fDeactiveTime = 45.0f;
     private float m_fDeactiveTimer;
 
     // Use this for initialization

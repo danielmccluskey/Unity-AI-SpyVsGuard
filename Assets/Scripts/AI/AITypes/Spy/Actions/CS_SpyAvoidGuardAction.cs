@@ -11,7 +11,7 @@ public class CS_SpyAvoidGuardAction : CS_GOAPAction
     public CS_SpyAvoidGuardAction()
     {
         AddEffect("avoidGuard", true);
-        m_fCost = 1.0f;
+        //m_fCost = 1.0f;
     }
 
     public override void ResetGA()

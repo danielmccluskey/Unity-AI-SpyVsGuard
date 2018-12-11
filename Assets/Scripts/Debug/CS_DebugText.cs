@@ -25,15 +25,23 @@ public class CS_DebugText : MonoBehaviour
     {
         if (m_bSpy)
         {
-            GUILayout.Box("Spy Debug");
-            GUILayout.Box("Current Action: " + m_sCurrentAction);
+            GUILayout.BeginArea(new Rect(0, 0, 100, 100));
+
+            GUILayout.BeginVertical();
+            GUILayout.Label("Spy Debug");
+            GUILayout.Label("Current Action: " + m_sCurrentAction);
+            GUILayout.EndVertical();
+            GUILayout.EndArea();
         }
         else
         {
-            GUILayout.Box("");
-            GUILayout.Box("");
-            GUILayout.Box("Guard Debug");
-            GUILayout.Box("Current Action: " + m_sCurrentAction);
+            GUILayout.BeginArea(new Rect(110, 0, 100, 100));
+
+            GUILayout.BeginVertical();
+            GUILayout.Label("Guard Debug");
+            GUILayout.Label("Current Action: " + m_sCurrentAction);
+            GUILayout.EndVertical();
+            GUILayout.EndArea();
         }
     }
 

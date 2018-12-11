@@ -131,6 +131,17 @@ public class CS_SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShotAttached(("event:/" + a_sSoundEventName), a_Position.gameObject);
     }
 
+    // @brief	Function to play a sound and attach it to a transform so it will move with it.
+    // @brief   USed for when [FMODUnity.EventRef] is used
+    // @brief	Looped Sounds will play forever with no way to stop it.
+    // @param	Vector3 a_v3Position = XYZ Vector3 to play the sound at.
+    // @param	string a_sSoundEventName = Sound to Play
+    // @example Play3DSoundAtPos(new Vector3(0.0f,0.0f,0.0f), "PlayerShoot");
+    public static void PlaySoundOnObjectWER(Transform a_Position, string a_sSoundEventName)
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached((a_sSoundEventName), a_Position.gameObject);
+    }
+
     // @brief	Function to play a 3D sound event at a given Vector3 Position
     // @brief	Looped Sounds will play forever with no way to stop it.
     // @param	Vector3 a_v3Position = XYZ Vector3 to play the sound at.

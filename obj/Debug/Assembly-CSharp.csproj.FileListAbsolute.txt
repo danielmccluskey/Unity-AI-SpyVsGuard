@@ -94,7 +94,6 @@ C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\Unity.IvyParser.dll
 C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\Boo.Lang.PatternMatching.dll
 C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\Boo.Lang.Useful.dll
 C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\Unity.CecilTools.dll
-C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\UnityEngine.xml
 C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\UnityEditor.xml
 C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\UnityEngine.AIModule.xml

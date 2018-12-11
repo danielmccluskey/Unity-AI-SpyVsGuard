@@ -7,7 +7,7 @@ public class CS_SoundComponent : MonoBehaviour
     private bool m_bPlayOnStart = false;
 
     [SerializeField]
-    private float m_fSoundRadius;
+    private float m_fSoundRadius = 0;
 
     [SerializeField]
     private LayerMask m_GuardAlertMask;
@@ -16,9 +16,14 @@ public class CS_SoundComponent : MonoBehaviour
     [FMODUnity.EventRef]
     private string m_sSoundToPlay;
 
+    [FMODUnity.EventRef]
+    public FMOD.Studio.EventInstance test;
+
     // Use this for initialization
     private void Start()
     {
+        m_fSoundRadius = GetComponent<FMODUnity.StudioEventEmitter>().OverrideMaxDistance;//Use the FMOD events distance
+
         CS_SoundManager.PlaySoundOnObjectWER(transform, m_sSoundToPlay);
         Collider[] cTargetsInViewRadius = Physics.OverlapSphere(transform.position, m_fSoundRadius, m_GuardAlertMask);
 

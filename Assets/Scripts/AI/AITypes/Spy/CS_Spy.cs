@@ -10,6 +10,7 @@ public class CS_Spy : CS_AIAgent
     private PatrolPoints m_ppCurrentPatrolPoint;
     private int m_iPatrolIndex;
     public bool m_bSeesGuard = false;
+    private bool m_bNeedsToHide = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -45,5 +46,16 @@ public class CS_Spy : CS_AIAgent
             m_iPatrolIndex = 0;
         }
         m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(m_ppCurrentPatrolPoint.m_iNextPatrolIndex);
+    }
+
+    public bool GetNeedsToHide()
+    {
+        return m_bNeedsToHide;
+    }
+
+    public void SetHide(bool a_bOn)
+    {
+        m_bNeedsToHide = a_bOn;
+        GetComponent<CS_AIAgent>().m_bInterrupt = true;
     }
 }

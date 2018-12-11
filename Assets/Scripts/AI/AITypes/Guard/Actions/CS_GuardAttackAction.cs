@@ -49,6 +49,7 @@ public class CS_GuardAttackAction : CS_GOAPAction
     public override bool PerformAction(GameObject agent)
     {
         m_bAttacking = true;
+        m_goTarget.GetComponent<CS_Spy>().SetHide(true);
         return true;
     }
 }

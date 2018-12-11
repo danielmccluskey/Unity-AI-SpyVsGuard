@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33326390072382822}
   - component: {fileID: 23402138657646108}
   - component: {fileID: 136061819862350366}
+  - component: {fileID: 54298976096030766}
   - component: {fileID: 195676203038299884}
   - component: {fileID: 114452126612382170}
   - component: {fileID: 114904905125638378}
@@ -94,6 +95,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538736436719412}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54298976096030766
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538736436719412}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114102463493422328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,18 +150,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b41e9df418c1d4097d27c581260bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_fInvestigationRange: 5
+  m_iInvestigationEffort: 5
   m_bCanSeePlayer: 0
   m_bCouldSeePlayer: 0
-  m_iInvestigationEffort: 5
-  m_fInvestigationRange: 5
-  m_fViewRadius: 9.91
   m_fViewAngle: 75
-  m_lmTargetMask:
-    serializedVersion: 2
-    m_Bits: 512
+  m_fViewRadius: 9.91
   m_lmObstacleMask:
     serializedVersion: 2
     m_Bits: 1024
+  m_lmTargetMask:
+    serializedVersion: 2
+    m_Bits: 512
   m_ltVisibleTargets: []
 --- !u!114 &114452126612382170
 MonoBehaviour:

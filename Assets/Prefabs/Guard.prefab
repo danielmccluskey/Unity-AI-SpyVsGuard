@@ -26,12 +26,12 @@ GameObject:
   - component: {fileID: 114452126612382170}
   - component: {fileID: 114904905125638378}
   - component: {fileID: 114102463493422328}
-  - component: {fileID: 114839280280039430}
+  - component: {fileID: 114745607534198572}
   - component: {fileID: 114390103885775682}
-  - component: {fileID: 114843369078701716}
+  - component: {fileID: 114839280280039430}
+  - component: {fileID: 114195012267149394}
   - component: {fileID: 114978477039458300}
   - component: {fileID: 114686556174258586}
-  - component: {fileID: 114745607534198572}
   m_Layer: 11
   m_Name: Guard
   m_TagString: Guard
@@ -108,6 +108,21 @@ MonoBehaviour:
   m_lPatrolPointList: []
   m_iAmountOfPatrolPoints: 5
   m_fPatrolRange: 15
+--- !u!114 &114195012267149394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538736436719412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1293fb2f7d897df409f9f7c33480ad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 50
+  m_goTarget: {fileID: 0}
+  m_sActionName: Turning Radio Off
 --- !u!114 &114390103885775682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,17 +196,6 @@ MonoBehaviour:
   m_fCost: 100
   m_goTarget: {fileID: 0}
   m_sActionName: Patrolling
---- !u!114 &114843369078701716
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538736436719412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089e356c1a8c8c8409b95d38b0c0bbe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114904905125638378
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -29,6 +29,7 @@ public class CS_Guard : CS_AIAgent
         HashSet<KeyValuePair<string, object>> goal = new HashSet<KeyValuePair<string, object>>();
         goal.Add(new KeyValuePair<string, object>("secureArea", true));
         goal.Add(new KeyValuePair<string, object>("damagePlayer", true));
+        goal.Add(new KeyValuePair<string, object>("turnOffRadio", true));
 
         return goal;
     }

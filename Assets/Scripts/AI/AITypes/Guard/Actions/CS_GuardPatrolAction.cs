@@ -49,4 +49,16 @@ public class CS_GuardPatrolAction : CS_GOAPAction
         GetComponent<CS_Guard>().NextPatrolPoint();
         return true;
     }
+
+    public void InvestigationMode(bool a_bTrue)
+    {
+        if (a_bTrue)
+        {
+            m_fCost = 25;
+        }
+        else
+        {
+            m_fCost = 100;
+        }
+    }
 }

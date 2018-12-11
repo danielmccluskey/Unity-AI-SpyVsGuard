@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\Actions\CS_GuardInvestigateAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\Actions\CS_GuardPatrolAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\Actions\CS_GuardSeePlayerAction.cs" />
+    <Compile Include="Assets\Scripts\AI\AITypes\Guard\Actions\CS_GuardTurnOffRadioAction.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_Guard.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\CS_GuardPatrolManager.cs" />
     <Compile Include="Assets\Scripts\AI\AITypes\Guard\Sensory\CS_GuardHearing.cs" />

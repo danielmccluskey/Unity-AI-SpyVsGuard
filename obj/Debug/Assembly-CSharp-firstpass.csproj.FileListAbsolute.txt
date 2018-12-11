@@ -333,6 +333,4 @@ C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp-firstpass.cspro
 C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp-firstpass.csproj.CopyComplete
 C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp-firstpass.pdb
-C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\UnityEditor.UI.dll
-C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\UnityEditor.UI.xml
 C:\Users\Betat\Documents\GitHub\CT6024-AI\obj\Debug\Assembly-CSharp-firstpass.csprojAssemblyReference.cache

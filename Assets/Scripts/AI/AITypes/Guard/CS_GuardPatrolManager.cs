@@ -204,6 +204,11 @@ public class CS_GuardPatrolManager : MonoBehaviour
         m_lPatrolPointList = new List<PatrolPoints>(m_lOriginalPatrolPoints);
         m_bInvestigationMode = false;
         m_fInvestigationTimer = m_fInvestigationTime;
+        CS_GuardPatrolAction cGuardPatrol = GetComponent<CS_GuardPatrolAction>();
+        if (cGuardPatrol != null)
+        {
+            cGuardPatrol.InvestigationMode(false);
+        }
     }
 
     public void InvestigateArea(Transform a_tPositionToInvestigate, int a_iAmountOfPoints, float a_fRangeToInvestigate)
@@ -219,6 +224,11 @@ public class CS_GuardPatrolManager : MonoBehaviour
         GeneratePositions(a_iAmountOfPoints, a_fRangeToInvestigate);
         ChooseRoute();
         GetComponent<CS_Guard>().ResetPointsForInvestigating();
+        CS_GuardPatrolAction cGuardPatrol = GetComponent<CS_GuardPatrolAction>();
+        if (cGuardPatrol != null)
+        {
+            cGuardPatrol.InvestigationMode(true);
+        }
     }
 
     public PatrolPoints GetSinglePatrolPoint(int a_iIndex)

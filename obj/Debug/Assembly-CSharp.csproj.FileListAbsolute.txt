@@ -335,3 +335,4 @@ C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp.csproj.CoreComp
 C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp.dll
 C:\Users\s1600056\Desktop\ai\CT6024-AI\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Betat\Documents\GitHub\CT6024-AI\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

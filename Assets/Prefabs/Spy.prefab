@@ -49,11 +49,11 @@ GameObject:
   - component: {fileID: 114442354523076166}
   - component: {fileID: 114652117786929540}
   - component: {fileID: 114091465891941502}
+  - component: {fileID: 114839942329378494}
   - component: {fileID: 114918936373582190}
+  - component: {fileID: 114201253541630412}
   - component: {fileID: 114255464953721386}
   - component: {fileID: 114347963795378116}
-  - component: {fileID: 114839942329378494}
-  - component: {fileID: 114201253541630412}
   m_Layer: 9
   m_Name: Spy
   m_TagString: Player
@@ -80,14 +80,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821691581665526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: 1.38, z: 0.31}
+  m_LocalRotation: {x: 0, y: -0.8627785, z: 0, w: 0.5055821}
+  m_LocalPosition: {x: 18.11, y: 1.38, z: 19.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294893138538034}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -119.26, z: 0}
 --- !u!20 &20099888323345660
 Camera:
   m_ObjectHideFlags: 1
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
-  m_sActionName: 
+  m_sActionName: Has Intel
 --- !u!114 &114255464953721386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 15
+  m_fCost: 20
   m_goTarget: {fileID: 0}
   m_sActionName: Getting Intel
 --- !u!114 &114262157090947294
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 1
   m_goTarget: {fileID: 0}
-  m_sActionName: 
+  m_sActionName: Has Totem
 --- !u!114 &114859491441009360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 10
+  m_fCost: 25
   m_goTarget: {fileID: 0}
   m_sActionName: Getting Totem
 --- !u!114 &114972493816225898

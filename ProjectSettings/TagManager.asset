@@ -7,6 +7,7 @@ TagManager:
   - Intel
   - Guard
   - Totem
+  - GuardSphere
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: test
+    uniqueID: 147691473
     locked: 0

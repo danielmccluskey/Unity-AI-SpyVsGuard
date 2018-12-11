@@ -101,6 +101,9 @@
     <Compile Include="Assets\Scripts\Debug\CS_DebugText.cs" />
     <Compile Include="Assets\Scripts\Knowledge\CS_IntelSubscription.cs" />
     <Compile Include="Assets\Scripts\Knowledge\CS_KnowledgeComponent.cs" />
+    <Compile Include="Assets\Scripts\Navmesh\CS_TeleportHolderToPlayer.cs" />
+    <Compile Include="Assets\Scripts\Navmesh\LocalNavMeshBuilder.cs" />
+    <Compile Include="Assets\Scripts\Navmesh\NavMeshSourceTag.cs" />
     <Compile Include="Assets\Scripts\Sound\CS_Radio.cs" />
     <Compile Include="Assets\Scripts\Sound\CS_SoundComponent.cs" />
     <Compile Include="Assets\Scripts\Sound\CS_SoundManager.cs" />

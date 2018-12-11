@@ -31,11 +31,11 @@ NavMeshProjectSettings:
     cost: 1
   - name: 
     cost: 1
-  - name: 
+  - name: test
     cost: 1
-  - name: 
-    cost: 1
-  - name: 
+  - name: test
+    cost: 1000
+  - name: test
     cost: 1
   - name: 
     cost: 1

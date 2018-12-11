@@ -17,6 +17,7 @@ public class CS_Guard : CS_AIAgent
         m_PatrolPointsTarget = new GameObject("GuardTarget");
 
         m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(0);
+        GetComponent<NavMeshAgent>().SetAreaCost(14, 1);
     }
 
     // Update is called once per frame

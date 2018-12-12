@@ -34,7 +34,11 @@ public class CS_SpyTurnOnRadioIntelAction : CS_GOAPAction
     {
         CS_RadioComponent[] goDistractingObjects = (CS_RadioComponent[])UnityEngine.GameObject.FindObjectsOfType(typeof(CS_RadioComponent));
         CS_RadioComponent goClosestDistraction = null;
-
+        CS_IntelComponent cIntel = GameObject.FindObjectOfType<CS_IntelComponent>();
+        if (cIntel == null)
+        {
+            return false;
+        }
         float fDistanceToDistraction = 0;
         foreach (CS_RadioComponent distraction in goDistractingObjects)
         {
@@ -42,12 +46,12 @@ public class CS_SpyTurnOnRadioIntelAction : CS_GOAPAction
             {
                 // first one, so choose it for now
                 goClosestDistraction = distraction;
-                fDistanceToDistraction = (distraction.gameObject.transform.position - transform.position).magnitude;
+                fDistanceToDistraction = (distraction.gameObject.transform.position - cIntel.transform.position).magnitude;
             }
             else
             {
                 // is this one closer than the last?
-                float dist = (distraction.gameObject.transform.position - transform.position).magnitude;
+                float dist = (distraction.gameObject.transform.position - cIntel.transform.position).magnitude;
                 if (dist < fDistanceToDistraction)
                 {
                     // we found a closer one, use it

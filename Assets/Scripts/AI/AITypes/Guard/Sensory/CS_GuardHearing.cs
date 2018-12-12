@@ -52,6 +52,6 @@ public class CS_GuardHearing : MonoBehaviour
     public void TurnedRadioOff()
     {
         m_bCanHearRadio = false;
-        Destroy(m_tSoundLocation, 3.0f);
+        //Destroy(m_tSoundLocation, 3.0f);
     }
 }

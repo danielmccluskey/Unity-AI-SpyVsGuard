@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821691581665526}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -37.65, y: 1.87, z: 36.23}
+  m_LocalPosition: {x: -42.1, y: 1.87, z: 34.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294893138538034}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 10
+  m_fCost: 1
   m_goTarget: {fileID: 0}
   m_sActionName: Escaping
 --- !u!114 &114201253541630412
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_bCanSeeIntel: 0
   m_bCanSeeTotem: 0
   m_fViewRadius: 30
-  m_fViewAngle: 159
+  m_fViewAngle: 87
   m_lmTargetMask:
     serializedVersion: 2
     m_Bits: 2048

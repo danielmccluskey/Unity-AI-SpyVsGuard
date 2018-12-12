@@ -62,7 +62,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 25
+  OverrideMaxDistance: 35
 --- !u!114 &114739306419895140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fSoundRadius: 30
+  a_bRadio: 1
   m_GuardAlertMask:
     serializedVersion: 2
     m_Bits: 2048

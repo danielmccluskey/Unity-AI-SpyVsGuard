@@ -59,6 +59,6 @@ public class CS_SoundComponent : MonoBehaviour
     public void StopSound()
     {
         m_fmSoundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        Destroy(gameObject, 10.0f);
+        Destroy(gameObject, 3.0f);
     }
 }

@@ -119,6 +119,7 @@
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Workspace.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\EffectPresetFolder\{56003239-a529-4bdd-b83c-2bb18bb4edf6}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\AudioFile\{838f8246-f52f-4378-b935-bf873d940a3f}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\AudioFile\{56512257-4298-40e4-a430-654391b67811}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\EventFolder\{534082ce-bcde-4339-b805-29d0a2f68150}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\SnapshotGroup\{41f73426-fdba-4e97-89d3-b25b61b32c02}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Master.xml" />

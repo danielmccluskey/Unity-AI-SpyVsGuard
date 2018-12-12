@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{56512257-4298-40e4-a430-654391b67811}">
+        <property name="assetPath">
+            <value>The Killers - Mr. Brightside.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>227.18693877551021</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{92ca9229-588d-4d40-ab49-3a246bb90e7a}</destination>
+        </relationship>
+    </object>
+</objects>

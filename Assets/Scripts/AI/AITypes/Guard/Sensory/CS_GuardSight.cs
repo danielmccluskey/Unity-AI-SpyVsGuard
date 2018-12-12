@@ -28,6 +28,11 @@ public class CS_GuardSight : MonoBehaviour
     public LayerMask m_lmTargetMask;//What sh
     public List<Transform> m_ltVisibleTargets = new List<Transform>();
 
+    [SerializeField]
+    private GameObject m_goAlertSoundObject;
+
+    private bool m_bAlertPlayed = false;
+
     private void Start()
     {
         StartCoroutine("FindTargets", 0.2f);
@@ -76,6 +81,18 @@ public class CS_GuardSight : MonoBehaviour
                         m_tPlayersLastKnownPosition = target;
                         m_bShouldBeInvestigating = true;
                     }
+
+                    if (target.CompareTag("Guard"))
+                    {
+                        if (target.GetComponent<CS_GuardSight>().m_bCanSeePlayer)
+                        {
+                            m_bCanSeePlayer = true;
+                            m_bCouldSeePlayer = true;
+                            GetComponent<CS_AIAgent>().m_bInterrupt = true;//Interrupt current action
+                            m_tPlayersLastKnownPosition = target.GetComponent<CS_GuardSight>().m_tPlayersLastKnownPosition;
+                            Debug.Log("Another guard can see player!");
+                        }
+                    }
                     if (target.CompareTag("HidingSpot"))
                     {
                         target.GetComponent<CS_HidingComponent>().m_bActive = false;
@@ -84,6 +101,12 @@ public class CS_GuardSight : MonoBehaviour
             }
         }
 
+        if (m_bCouldSeePlayer && m_bCanSeePlayer && !m_bAlertPlayed)
+        {
+            m_bAlertPlayed = true;
+            GameObject goAlert = Instantiate(m_goAlertSoundObject, transform);
+            goAlert.GetComponent<CS_SoundComponent>().StopSound();
+        }
         if (m_bCouldSeePlayer && !m_bCanSeePlayer)//If guard has lost sight of the player
         {
             if (m_bShouldBeInvestigating)//If they should be investigating this
@@ -92,6 +115,7 @@ public class CS_GuardSight : MonoBehaviour
                 GetComponent<CS_GuardPatrolManager>().InvestigateArea(m_tPlayersLastKnownPosition, m_iInvestigationEffort, m_fInvestigationRange);//Investigate the last known location of the player
                 m_bShouldBeInvestigating = false;//reset
                 m_bCouldSeePlayer = false;//reset
+                m_bAlertPlayed = false;
             }
         }
     }

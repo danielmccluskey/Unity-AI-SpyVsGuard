@@ -57,4 +57,14 @@ public class CS_Guard : CS_AIAgent
     {
         m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(m_ppCurrentPatrolPoint.m_iNextPatrolIndex);
     }
+
+    public void MoveTarget(Vector3 a_v3Pos)
+    {
+        m_PatrolPointsTarget.transform.position = a_v3Pos;
+    }
+
+    public GameObject GetSpyTarget()
+    {
+        return m_PatrolPointsTarget;
+    }
 }

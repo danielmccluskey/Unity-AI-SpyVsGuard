@@ -10,6 +10,9 @@ public class CS_SoundComponent : MonoBehaviour
     private float m_fSoundRadius = 0;
 
     [SerializeField]
+    private bool a_bRadio = false;
+
+    [SerializeField]
     private LayerMask m_GuardAlertMask;
 
     [SerializeField]
@@ -36,7 +39,14 @@ public class CS_SoundComponent : MonoBehaviour
             CS_GuardHearing cGuardRef = cCurrentTarget.GetComponent<CS_GuardHearing>();
             if (cGuardRef != null)
             {
-                cGuardRef.AlertHearSound(transform);
+                if (a_bRadio)
+                {
+                    cGuardRef.AlertHearRadio(transform);
+                }
+                else
+                {
+                    cGuardRef.AlertHearOtherSound(transform);
+                }
             }
         }
     }

@@ -47,7 +47,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538736436719412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.8240595, y: 0.0004119873, z: 60.99687}
+  m_LocalPosition: {x: 45.2, y: 0.0004119873, z: 60.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b41e9df418c1d4097d27c581260bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fInvestigationRange: 10
+  m_fInvestigationRange: 7.5
   m_iInvestigationEffort: 5
   m_bCanSeePlayer: 0
   m_bCouldSeePlayer: 0
@@ -161,8 +161,10 @@ MonoBehaviour:
     m_Bits: 1024
   m_lmTargetMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 2560
   m_ltVisibleTargets: []
+  m_goAlertSoundObject: {fileID: 1812122778539634, guid: f989226bd2c1148428d37fa7b5e951bf,
+    type: 2}
 --- !u!114 &114452126612382170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,7 +269,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2.75
+  m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 1200

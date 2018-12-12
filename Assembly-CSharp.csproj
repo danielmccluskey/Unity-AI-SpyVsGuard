@@ -115,6 +115,7 @@
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\BankFolder\{bd81e7e1-a549-4703-8328-f78844fea3d5}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Mixer.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\EncodingSetting\{5a188f30-26d3-4855-bd76-e64b519d957f}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Event\{d901b8ba-8ac0-40e4-9590-5e62495e0aea}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Workspace.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\EffectPresetFolder\{56003239-a529-4bdd-b83c-2bb18bb4edf6}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\AudioFile\{838f8246-f52f-4378-b935-bf873d940a3f}.xml" />
@@ -126,6 +127,7 @@
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Tags.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Platform\{d4b706fa-d37f-4499-b701-71d74deb6088}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\ParameterPresetFolder\{2fd66e95-fd75-42cb-a6c2-84eb02ee15f6}.xml" />
+    <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\AudioFile\{eede2c09-017c-45a8-ae61-7ba6a179006f}.xml" />
     <None Include="Assets\FMODProject\CT6018AIDMCC\Metadata\Event\{6b06fa1e-dcdc-4920-b905-0572897ce872}.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Betat/Documents/GitHub/CT6024-AI/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

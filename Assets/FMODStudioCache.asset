@@ -16,12 +16,13 @@ MonoBehaviour:
   - {fileID: 114329276556661238}
   EditorEvents:
   - {fileID: 114702135788233698}
+  - {fileID: 114776216576546338}
   MasterBanks:
   - {fileID: 114372500021612764}
   - {fileID: 114917251844232328}
   StringsBanks:
   - {fileID: 114309973755974034}
-  stringsBankWriteTime: 636799955839156948
+  stringsBankWriteTime: 636802284454985513
   cacheVersion: 3
 --- !u!114 &114309973755974034
 MonoBehaviour:
@@ -35,11 +36,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMODProject\CT6018AIDMCC\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636799955839156948
+  lastModified: 636802284454985513
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 768
+    Value: 820
   Exists: 1
 --- !u!114 &114329276556661238
 MonoBehaviour:
@@ -54,11 +55,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Betat\Documents\GitHub\CT6024-AI\Assets\FMODProject\CT6018AIDMCC\Build\Desktop\Master
     Bank.bank
-  lastModified: 636799955839127017
+  lastModified: 636802284454935626
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 64960
+    Value: 79840
   Exists: 1
 --- !u!114 &114372500021612764
 MonoBehaviour:
@@ -99,8 +100,30 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 25
   Length: 6597
+--- !u!114 &114776216576546338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/GuardAlert
+  guid: bab801d9c08ae44095905e62495e0aea
+  Banks:
+  - {fileID: 114329276556661238}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9.400001
+  Length: 1889
 --- !u!114 &114917251844232328
 MonoBehaviour:
   m_ObjectHideFlags: 0

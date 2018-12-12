@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821691581665526}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16, y: 1.87, z: 59.2}
+  m_LocalPosition: {x: -37.65, y: 1.87, z: 36.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294893138538034}
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_bInterrupt: 0
   m_bKnowsTotemLocation: 0
   m_fAggroDistance: 1000
-  m_fArrivalDistance: 2
+  m_fArrivalDistance: 3
   m_PatrolPointsTarget: {fileID: 0}
   m_bSeesGuard: 0
 --- !u!114 &114279220802239554
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 1
+  m_fCost: 2
   m_goTarget: {fileID: 0}
   m_sActionName: Avoiding Guard
 --- !u!114 &114839942329378494

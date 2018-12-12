@@ -75,11 +75,15 @@ public class CS_SpyAvoidGuardAction : CS_GOAPAction
             tTarget.position = rcHit.point;
         }
         NavMeshHit nmHit;
+        tTarget.position = tTarget.position + ((transform.position - tTarget.position) / 2);
+
         if (NavMesh.SamplePosition(tTarget.position, out nmHit, Mathf.Infinity, NavMesh.AllAreas))
         {
         }
         tTarget.transform.position = nmHit.position;
+
         GetComponent<CS_Spy>().MoveTarget(nmHit.position);
+
         m_goTarget = tTarget.gameObject;
         Debug.Log("Avoiding! ");
 

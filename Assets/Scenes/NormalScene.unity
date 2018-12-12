@@ -246,6 +246,11 @@ Prefab:
       propertyPath: m_fPatrolRange
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114390103885775682, guid: 7d4fff4c92742644fad01efd3a666c60,
+        type: 2}
+      propertyPath: m_lmTargetMask.m_Bits
+      value: 2560
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
   m_IsPrefabAsset: 0
@@ -513,7 +518,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -28.4
+      value: -13.1
       objectReference: {fileID: 0}
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_LocalPosition.y
@@ -521,15 +526,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 63.5
+      value: 65.2
       objectReference: {fileID: 0}
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.646124
       objectReference: {fileID: 0}
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_LocalRotation.z
@@ -537,7 +542,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.76323247
       objectReference: {fileID: 0}
     - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
       propertyPath: m_RootOrder
@@ -551,6 +556,10 @@ Prefab:
         type: 2}
       propertyPath: m_fPatrolRange
       value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295718459203882, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 279.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}
@@ -13442,7 +13451,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4487669267820304, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 16
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 4487669267820304, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
       propertyPath: m_LocalPosition.y
@@ -13450,7 +13459,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4487669267820304, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 59.2
+      value: 58.68
       objectReference: {fileID: 0}
     - target: {fileID: 4487669267820304, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13470,11 +13479,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4487669267820304, guid: d34b2e6f26e7e72418613261e510ad01, type: 2}
       propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114761443307632530, guid: d34b2e6f26e7e72418613261e510ad01,
-        type: 2}
-      propertyPath: m_fCost
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14800,20 +14804,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114390103885775682, guid: 7d4fff4c92742644fad01efd3a666c60,
-        type: 2}
-      propertyPath: m_fInvestigationRange
-      value: 7.5
-      objectReference: {fileID: 0}
     - target: {fileID: 114102463493422328, guid: 7d4fff4c92742644fad01efd3a666c60,
         type: 2}
       propertyPath: m_fPatrolRange
       value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 195676203038299884, guid: 7d4fff4c92742644fad01efd3a666c60,
-        type: 2}
-      propertyPath: m_Speed
-      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4fff4c92742644fad01efd3a666c60, type: 2}

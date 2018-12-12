@@ -21,12 +21,22 @@ public class CS_GuardHearing : MonoBehaviour
     {
     }
 
-    public void AlertHearSound(Transform a_tSoundLocation)
+    public void AlertHearRadio(Transform a_tSoundLocation)
     {
         GetComponent<CS_AIAgent>().m_bInterrupt = true;
         //GetComponent<CS_GuardPatrolManager>().InvestigateArea(a_tSoundLocation, m_iInvestigationEffort, m_fInvestigationRange);
+        GetComponent<CS_Guard>().MoveTarget(a_tSoundLocation.position);
+
         m_tSoundLocation = a_tSoundLocation;
         m_bCanHearRadio = true;
+    }
+
+    public void AlertHearOtherSound(Transform a_tSoundLocation)
+    {
+        GetComponent<CS_AIAgent>().m_bInterrupt = true;
+        GetComponent<CS_Guard>().MoveTarget(a_tSoundLocation.position);
+        m_tSoundLocation = GetComponent<CS_Guard>().GetSpyTarget().transform;
+        GetComponent<CS_GuardPatrolManager>().InvestigateArea(a_tSoundLocation, m_iInvestigationEffort, m_fInvestigationRange);
     }
 
     public bool GetCanHearRadio()
@@ -42,5 +52,6 @@ public class CS_GuardHearing : MonoBehaviour
     public void TurnedRadioOff()
     {
         m_bCanHearRadio = false;
+        Destroy(m_tSoundLocation, 3.0f);
     }
 }

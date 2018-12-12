@@ -76,6 +76,10 @@ public class CS_GuardSight : MonoBehaviour
                         m_tPlayersLastKnownPosition = target;
                         m_bShouldBeInvestigating = true;
                     }
+                    if (target.CompareTag("HidingSpot"))
+                    {
+                        target.GetComponent<CS_HidingComponent>().m_bActive = false;
+                    }
                 }
             }
         }

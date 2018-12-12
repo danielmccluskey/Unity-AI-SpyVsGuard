@@ -8,6 +8,8 @@ TagManager:
   - Guard
   - Totem
   - GuardSphere
+  - HidingSpot
+  - SoundLocation
   layers:
   - Default
   - TransparentFX

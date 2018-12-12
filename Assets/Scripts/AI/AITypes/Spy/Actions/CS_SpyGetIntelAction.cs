@@ -12,6 +12,7 @@ public class CS_SpyGetIntelAction : CS_GOAPAction
     {
         AddEffect("knowsTotemLocation", true);
         AddEffect("getIntel", true);
+        AddPreCondition("intelClearOfEnemies", true);
         // m_fCost = 1.0f;
     }
 

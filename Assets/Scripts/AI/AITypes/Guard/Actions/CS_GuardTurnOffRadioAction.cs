@@ -59,7 +59,7 @@ public class CS_GuardTurnOffRadioAction : CS_GOAPAction
             cGuard.GetComponent<CS_GuardHearing>().TurnedRadioOff();
         }
         GetComponent<CS_GuardPatrolManager>().InvestigateArea(m_goTarget.transform, 5, 5);//Investigate the last known location of the player
-
+        m_goTarget.GetComponent<CS_SoundComponent>().StopSound();
         return true;
     }
 }

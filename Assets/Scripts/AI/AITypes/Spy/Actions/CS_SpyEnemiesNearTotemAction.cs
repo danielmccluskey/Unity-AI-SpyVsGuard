@@ -43,6 +43,10 @@ public class CS_SpyEnemiesNearTotemAction : CS_GOAPAction
         {
             return false;
         }
+        if (!cTotemRef.GetComponent<CS_KnowledgeComponent>().HasBeenLocated())
+        {
+            return false;
+        }
         Collider[] cTargetsInViewRadius = Physics.OverlapSphere(cTotemRef.transform.position, m_fViewRadius, m_lmTargetMask);//Get colliders in radius that we are interested in
         foreach (Collider cCollider in cTargetsInViewRadius)
         {

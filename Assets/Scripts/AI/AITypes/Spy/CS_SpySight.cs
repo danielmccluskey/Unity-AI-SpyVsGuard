@@ -5,6 +5,7 @@ using UnityEngine;
 public class CS_SpySight : MonoBehaviour
 {
     public bool m_bCanSeeGuard = false;
+    public bool m_bCouldSeeGuard = false;
     public bool m_bCanSeeIntel = false;
     public bool m_bCanSeeTotem = false;
 
@@ -53,6 +54,7 @@ public class CS_SpySight : MonoBehaviour
                     if (target.CompareTag("Guard"))
                     {
                         m_bCanSeeGuard = true;
+                        GetComponent<CS_AIAgent>().m_bInterrupt = true;
                     }
                     if (target.CompareTag("Intel"))
                     {

@@ -46,7 +46,9 @@ GameObject:
   - component: {fileID: 114531998868841434}
   - component: {fileID: 114972493816225898}
   - component: {fileID: 114859491441009360}
+  - component: {fileID: 114468748452838034}
   - component: {fileID: 114442354523076166}
+  - component: {fileID: 114279220802239554}
   - component: {fileID: 114652117786929540}
   - component: {fileID: 114091465891941502}
   - component: {fileID: 114839942329378494}
@@ -54,6 +56,8 @@ GameObject:
   - component: {fileID: 114201253541630412}
   - component: {fileID: 114255464953721386}
   - component: {fileID: 114347963795378116}
+  - component: {fileID: 114634892471039276}
+  - component: {fileID: 114761443307632530}
   m_Layer: 9
   m_Name: Spy
   m_TagString: Player
@@ -80,14 +84,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821691581665526}
-  m_LocalRotation: {x: 0, y: -0.8627785, z: 0, w: 0.5055821}
-  m_LocalPosition: {x: -36.4, y: 1.87, z: -8.7}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 16, y: 1.87, z: 59.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294893138538034}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -119.26, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!20 &20099888323345660
 Camera:
   m_ObjectHideFlags: 1
@@ -189,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 1
+  m_fCost: 10
   m_goTarget: {fileID: 0}
   m_sActionName: Escaping
 --- !u!114 &114201253541630412
@@ -204,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 1
+  m_fCost: 5
   m_goTarget: {fileID: 0}
   m_sActionName: Has Intel
 --- !u!114 &114255464953721386
@@ -240,6 +244,21 @@ MonoBehaviour:
   m_fArrivalDistance: 2
   m_PatrolPointsTarget: {fileID: 0}
   m_bSeesGuard: 0
+--- !u!114 &114279220802239554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d7f851a9f4fb446b03c64dc6c539b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 10
+  m_goTarget: {fileID: 0}
+  m_sActionName: Turning on Radio INTEL
 --- !u!114 &114347963795378116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,7 +299,26 @@ MonoBehaviour:
   m_bInRange: 0
   m_fCost: 10
   m_goTarget: {fileID: 0}
+  m_sActionName: Turning on radio TOTEM
+--- !u!114 &114468748452838034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1228e0e39624c8442969c7e6af972168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 10
+  m_goTarget: {fileID: 0}
   m_sActionName: 
+  m_fViewRadius: 25
+  m_lmTargetMask:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &114531998868841434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,8 +331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lPatrolPointList: []
-  m_iAmountOfPatrolPoints: 10
-  m_fPatrolRange: 200
+  m_iAmountOfPatrolPoints: 25
+  m_fPatrolRange: 300
 --- !u!114 &114566663056931938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,6 +345,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
+--- !u!114 &114634892471039276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2417e6b9159b7d64f8d8541d1575bc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 10
+  m_goTarget: {fileID: 0}
+  m_sActionName: Checking enemies near totem
+  m_fViewRadius: 20
+  m_lmTargetMask:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &114652117786929540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,7 +379,22 @@ MonoBehaviour:
   m_fCost: 5
   m_goTarget: {fileID: 0}
   m_sActionName: Hiding
-  m_fHideTime: 4
+  m_fHideTime: 5
+--- !u!114 &114761443307632530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821691581665526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16391bd607b50804198c464700253643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bInRange: 0
+  m_fCost: 1
+  m_goTarget: {fileID: 0}
+  m_sActionName: Avoiding Guard
 --- !u!114 &114839942329378494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bInRange: 0
-  m_fCost: 1
+  m_fCost: 5
   m_goTarget: {fileID: 0}
   m_sActionName: Has Totem
 --- !u!114 &114859491441009360
@@ -377,10 +449,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bCanSeeGuard: 0
+  m_bCouldSeeGuard: 0
   m_bCanSeeIntel: 0
   m_bCanSeeTotem: 0
-  m_fViewRadius: 15
-  m_fViewAngle: 79
+  m_fViewRadius: 30
+  m_fViewAngle: 159
   m_lmTargetMask:
     serializedVersion: 2
     m_Bits: 2048

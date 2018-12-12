@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CS_SpyAvoidGuardAction : CS_GOAPAction
 {
@@ -38,6 +39,49 @@ public class CS_SpyAvoidGuardAction : CS_GOAPAction
         {
             return false;
         }
+        float fDotProduct = Vector3.Dot(goVisibleGuard.transform.forward, (transform.position - goVisibleGuard.transform.position).normalized);
+        if (fDotProduct < 0.5f)
+        {
+            return false;
+        }
+
+        //Idea for raycast from Callum Pertoldi
+        RaycastHit rcHit;
+        Transform tTarget = GetComponent<CS_Spy>().GetSpyTarget().transform;
+        float fLeftDist, fRightDist, fBackDist;
+        float fFurthest;
+        Ray rLeftRay = new Ray(transform.position, Vector3.left);
+        Ray rBackRay = new Ray(transform.position, Vector3.back);
+        Ray rRightRay = new Ray(transform.position, Vector3.right);
+
+        Physics.Raycast(rLeftRay, out rcHit);
+        tTarget.position = rcHit.point;
+        fLeftDist = rcHit.distance;
+        fFurthest = fLeftDist;
+
+        Physics.Raycast(rRightRay, out rcHit);
+        fRightDist = rcHit.distance;
+        if (fRightDist > fFurthest)
+        {
+            fFurthest = fRightDist;
+            tTarget.position = rcHit.point;
+        }
+
+        Physics.Raycast(rBackRay, out rcHit);
+        fBackDist = rcHit.distance;
+        if (fBackDist > fFurthest)
+        {
+            fFurthest = fBackDist;
+            tTarget.position = rcHit.point;
+        }
+        NavMeshHit nmHit;
+        if (NavMesh.SamplePosition(tTarget.position, out nmHit, Mathf.Infinity, NavMesh.AllAreas))
+        {
+        }
+        tTarget.transform.position = nmHit.position;
+        GetComponent<CS_Spy>().MoveTarget(nmHit.position);
+        m_goTarget = tTarget.gameObject;
+        Debug.Log("Avoiding! ");
 
         if (m_goTarget != null)
         {

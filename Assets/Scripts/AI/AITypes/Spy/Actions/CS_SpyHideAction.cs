@@ -8,6 +8,7 @@ public class CS_SpyHideAction : CS_GOAPAction
     private bool m_bRequiresInRange = true;
 
     private bool m_bIshidden = false;
+    private bool m_bRunTimer = false;
 
     [SerializeField]
     private float m_fHideTime;
@@ -22,14 +23,25 @@ public class CS_SpyHideAction : CS_GOAPAction
     public CS_SpyHideAction()
     {
         AddEffect("avoidGuard", true);
+        AddEffect("totemClearOfEnemies", false);
+        AddEffect("intelClearOfEnemies", false);
 
         // m_fCost = 1.0f;
     }
 
+    private void Update()
+    {
+        if (m_bRunTimer)
+
+        {
+            m_fHideTimer -= Time.deltaTime;
+        }
+    }
+
     public override void ResetGA()
     {
-        m_bIshidden = false;
         m_goTarget = null;
+        m_bIshidden = false;
     }
 
     public override bool IsActionFinished()
@@ -98,12 +110,13 @@ public class CS_SpyHideAction : CS_GOAPAction
     public override bool PerformAction(GameObject agent)
     {
         m_bIshidden = true;
-        m_fHideTimer -= Time.deltaTime;
+        m_bRunTimer = true;
         if (m_fHideTimer <= 0)
         {
             GetComponent<CS_Spy>().SetHide(false);
             m_fHideTimer = m_fHideTime;
-
+            GetComponent<CS_AIAgent>().m_bInterrupt = true;//Interrupt current action
+            m_bRunTimer = false;
             return true;
         }
         return false;

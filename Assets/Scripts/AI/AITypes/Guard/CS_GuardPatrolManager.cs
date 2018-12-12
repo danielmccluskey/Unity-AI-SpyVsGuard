@@ -225,6 +225,7 @@ public class CS_GuardPatrolManager : MonoBehaviour
         m_lPatrolPointList.Clear();
         GeneratePositions(m_iAmountOfPatrolPoints, m_fPatrolRange);
         ChooseRoute();
+        GetComponent<CS_AIAgent>().m_bInterrupt = true;
     }
 
     /// <summary>

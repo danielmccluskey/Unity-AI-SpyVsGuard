@@ -15,6 +15,7 @@ public class CS_Guard : CS_AIAgent
     private void Start()
     {
         m_PatrolPointsTarget = new GameObject("GuardTarget");
+        m_PatrolPointsTarget.transform.position = transform.position;
 
         m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(0);
         GetComponent<NavMeshAgent>().SetAreaCost(14, 1);
@@ -43,6 +44,10 @@ public class CS_Guard : CS_AIAgent
 
     public GameObject GetCurrentPatrolPoint()
     {
+        if (m_ppCurrentPatrolPoint.m_v3PatrolPointPosition == Vector3.zero)
+        {
+            m_ppCurrentPatrolPoint.m_v3PatrolPointPosition = transform.position;
+        }
         m_PatrolPointsTarget.transform.position = m_ppCurrentPatrolPoint.m_v3PatrolPointPosition;
 
         return m_PatrolPointsTarget;

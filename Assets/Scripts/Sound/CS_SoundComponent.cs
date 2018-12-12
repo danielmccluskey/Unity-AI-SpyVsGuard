@@ -17,14 +17,18 @@ public class CS_SoundComponent : MonoBehaviour
     private string m_sSoundToPlay;
 
     [FMODUnity.EventRef]
-    public FMOD.Studio.EventInstance test;
+    public FMOD.Studio.EventInstance m_fmSoundEventInstance;
 
     // Use this for initialization
     private void Start()
     {
         m_fSoundRadius = GetComponent<FMODUnity.StudioEventEmitter>().OverrideMaxDistance;//Use the FMOD events distance
 
-        CS_SoundManager.PlaySoundOnObjectWER(transform, m_sSoundToPlay);
+        m_fmSoundEventInstance = FMODUnity.RuntimeManager.CreateInstance(m_sSoundToPlay);
+        m_fmSoundEventInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
+        m_fmSoundEventInstance.start();
+        m_fmSoundEventInstance.release();
+
         Collider[] cTargetsInViewRadius = Physics.OverlapSphere(transform.position, m_fSoundRadius, m_GuardAlertMask);
 
         foreach (Collider cCurrentTarget in cTargetsInViewRadius)
@@ -35,11 +39,16 @@ public class CS_SoundComponent : MonoBehaviour
                 cGuardRef.AlertHearSound(transform);
             }
         }
-        Destroy(gameObject, 20f);
     }
 
     // Update is called once per frame
     private void Update()
     {
+    }
+
+    public void StopSound()
+    {
+        m_fmSoundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        Destroy(gameObject, 10.0f);
     }
 }

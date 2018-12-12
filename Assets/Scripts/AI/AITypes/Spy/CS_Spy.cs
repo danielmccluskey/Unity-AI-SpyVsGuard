@@ -16,7 +16,6 @@ public class CS_Spy : CS_AIAgent
     private void Start()
     {
         m_PatrolPointsTarget = new GameObject("SpyTarget");
-
         m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(0);
     }
 
@@ -52,6 +51,16 @@ public class CS_Spy : CS_AIAgent
     public bool GetNeedsToHide()
     {
         return m_bNeedsToHide;
+    }
+
+    public GameObject GetSpyTarget()
+    {
+        return m_PatrolPointsTarget;
+    }
+
+    public void MoveTarget(Vector3 a_v3Pos)
+    {
+        m_PatrolPointsTarget.transform.position = a_v3Pos;
     }
 
     public void SetHide(bool a_bOn)

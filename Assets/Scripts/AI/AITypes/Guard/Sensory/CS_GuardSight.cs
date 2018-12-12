@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Gives the guards sight
+//////////////////////////////////////////////////////////////////
 //Followed the Sebastian Lague tutorial on Field of View to write this script
 //https://www.youtube.com/watch?v=rQG9aUWarwE
 //

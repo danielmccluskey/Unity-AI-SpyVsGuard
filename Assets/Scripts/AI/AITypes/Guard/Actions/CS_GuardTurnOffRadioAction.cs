@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Makes guards turn off activated radios
+//////////////////////////////////////////////////////////////////
 public class CS_GuardTurnOffRadioAction : CS_GOAPAction
 {
     private bool m_bRequiresInRange = true;

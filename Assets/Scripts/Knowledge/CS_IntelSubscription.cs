@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CS_IntelSubscription : MonoBehaviour {
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Intel subscription
+//////////////////////////////////////////////////////////////////
+public class CS_IntelSubscription : MonoBehaviour
+{
+    // Use this for initialization
+    private void Start()
+    {
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Update is called once per frame
+    private void Update()
+    {
+    }
 }

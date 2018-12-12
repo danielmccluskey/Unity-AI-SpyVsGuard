@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Controls the spy and defines its goals
+//////////////////////////////////////////////////////////////////
 public class CS_Spy : CS_AIAgent
 {
     public GameObject m_PatrolPointsTarget;
@@ -30,6 +36,10 @@ public class CS_Spy : CS_AIAgent
         return goal;
     }
 
+    /// <summary>
+    /// Gets the current search point.
+    /// </summary>
+    /// <returns></returns>
     public GameObject GetCurrentSearchPoint()
     {
         m_PatrolPointsTarget.transform.position = m_ppCurrentPatrolPoint.m_v3PatrolPointPosition;
@@ -37,6 +47,9 @@ public class CS_Spy : CS_AIAgent
         return m_PatrolPointsTarget;
     }
 
+    /// <summary>
+    /// Gets the next search point.
+    /// </summary>
     public void NextSearchPoint()
     {
         m_iPatrolIndex++;
@@ -48,21 +61,37 @@ public class CS_Spy : CS_AIAgent
         m_ppCurrentPatrolPoint = GetComponent<CS_GuardPatrolManager>().GetSinglePatrolPoint(m_ppCurrentPatrolPoint.m_iNextPatrolIndex);
     }
 
+    /// <summary>
+    /// Gets the needs to hide.
+    /// </summary>
+    /// <returns></returns>
     public bool GetNeedsToHide()
     {
         return m_bNeedsToHide;
     }
 
+    /// <summary>
+    /// Gets the spy target.
+    /// </summary>
+    /// <returns></returns>
     public GameObject GetSpyTarget()
     {
         return m_PatrolPointsTarget;
     }
 
+    /// <summary>
+    /// Moves the target.
+    /// </summary>
+    /// <param name="a_v3Pos">Position to move it to</param>
     public void MoveTarget(Vector3 a_v3Pos)
     {
         m_PatrolPointsTarget.transform.position = a_v3Pos;
     }
 
+    /// <summary>
+    /// Sets the hide.
+    /// </summary>
+    /// <param name="a_bOn">if set to <c>true</c> [a b on].</param>
     public void SetHide(bool a_bOn)
     {
         m_bNeedsToHide = a_bOn;

@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Script to change the debug text
+//////////////////////////////////////////////////////////////////
 public class CS_DebugText : MonoBehaviour
 {
     [SerializeField]

@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Allows the spy to see
+//////////////////////////////////////////////////////////////////
+/////Followed the Sebastian Lague tutorial on Field of View to write this script
+//https://www.youtube.com/watch?v=rQG9aUWarwE
+//
 public class CS_SpySight : MonoBehaviour
 {
     public bool m_bCanSeeGuard = false;
@@ -33,6 +42,9 @@ public class CS_SpySight : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Finds the visible targets.
+    /// </summary>
     private void FindVisibleTargets()
     {
         m_ltVisibleTargets.Clear();
@@ -74,11 +86,19 @@ public class CS_SpySight : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handles the intel sighting.
+    /// </summary>
+    /// <param name="a_goIntelInQuestion">intel in question.</param>
     private void HandleIntelSighting(GameObject a_goIntelInQuestion)
     {
         a_goIntelInQuestion.GetComponent<CS_KnowledgeComponent>().SetFound(true);
     }
 
+    /// <summary>
+    /// Handles the totem sighting.
+    /// </summary>
+    /// <param name="a_goIntelInQuestion">intel in question.</param>
     private void HandleTotemSighting(GameObject a_goIntelInQuestion)
     {
         CS_IntelComponent[] cIntelList = GameObject.FindObjectsOfType<CS_IntelComponent>();
@@ -89,6 +109,12 @@ public class CS_SpySight : MonoBehaviour
         a_goIntelInQuestion.GetComponent<CS_KnowledgeComponent>().SetFound(true);
     }
 
+    /// <summary>
+    /// Directions from angle.
+    /// </summary>
+    /// <param name="a_fAngleDegrees">Angle in degrees.</param>
+    /// <param name="a_bGlobalAngle">if set to <c>true</c> [a b global angle].</param>
+    /// <returns></returns>
     public Vector3 DirectionFromAngle(float a_fAngleDegrees, bool a_bGlobalAngle)
     {
         if (!a_bGlobalAngle)
@@ -98,6 +124,10 @@ public class CS_SpySight : MonoBehaviour
         return new Vector3(Mathf.Sin(a_fAngleDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(a_fAngleDegrees * Mathf.Deg2Rad));
     }
 
+    /// <summary>
+    /// Gets the visible guard.
+    /// </summary>
+    /// <returns></returns>
     public GameObject GetVisibleGuard()
     {
         foreach (Transform tTarget in m_ltVisibleTargets)

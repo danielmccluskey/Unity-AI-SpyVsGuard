@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Controls the guard and defines its goals
+//////////////////////////////////////////////////////////////////
 public class CS_Guard : CS_AIAgent
 {
     public GameObject m_PatrolPointsTarget;

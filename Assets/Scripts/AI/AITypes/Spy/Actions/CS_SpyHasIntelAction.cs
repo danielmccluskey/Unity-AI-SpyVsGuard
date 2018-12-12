@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Checks if spy has intel
+//////////////////////////////////////////////////////////////////
 public class CS_SpyHasIntelAction : CS_GOAPAction
 {
     private bool m_bRequiresInRange = false;

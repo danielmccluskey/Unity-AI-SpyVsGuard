@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Allows the guard to hear sounds
+//////////////////////////////////////////////////////////////////
 public class CS_GuardHearing : MonoBehaviour
 {
     private int m_iInvestigationEffort = 5;

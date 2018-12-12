@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Hiding spot identifier
+//////////////////////////////////////////////////////////////////
 public class CS_HidingComponent : MonoBehaviour
 {
     public bool m_bActive = true;

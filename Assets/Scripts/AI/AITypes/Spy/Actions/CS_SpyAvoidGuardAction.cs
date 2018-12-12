@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Makes spy avoid guards in los
+//////////////////////////////////////////////////////////////////
 public class CS_SpyAvoidGuardAction : CS_GOAPAction
 {
     private bool m_bRequiresInRange = true;

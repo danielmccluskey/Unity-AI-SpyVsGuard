@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Sound Identifier
+//////////////////////////////////////////////////////////////////
 public class CS_SoundComponent : MonoBehaviour
 {
     private bool m_bPlayOnStart = false;
@@ -27,12 +33,12 @@ public class CS_SoundComponent : MonoBehaviour
     {
         m_fSoundRadius = GetComponent<FMODUnity.StudioEventEmitter>().OverrideMaxDistance;//Use the FMOD events distance
 
-        m_fmSoundEventInstance = FMODUnity.RuntimeManager.CreateInstance(m_sSoundToPlay);
-        m_fmSoundEventInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
-        m_fmSoundEventInstance.start();
+        m_fmSoundEventInstance = FMODUnity.RuntimeManager.CreateInstance(m_sSoundToPlay);//Create a sound instance that we can control
+        m_fmSoundEventInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));//Make the sound here
+        m_fmSoundEventInstance.start();//Start the sound
         m_fmSoundEventInstance.release();
 
-        Collider[] cTargetsInViewRadius = Physics.OverlapSphere(transform.position, m_fSoundRadius, m_GuardAlertMask);
+        Collider[] cTargetsInViewRadius = Physics.OverlapSphere(transform.position, m_fSoundRadius, m_GuardAlertMask);//Get all guards in radius
 
         foreach (Collider cCurrentTarget in cTargetsInViewRadius)
         {
@@ -56,6 +62,9 @@ public class CS_SoundComponent : MonoBehaviour
     {
     }
 
+    /// <summary>
+    /// Stops the sound.
+    /// </summary>
     public void StopSound()
     {
         m_fmSoundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);

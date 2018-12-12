@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Simple script to start and stop radio
+//////////////////////////////////////////////////////////////////
 public class CS_Radio : MonoBehaviour
 {
     [SerializeField]

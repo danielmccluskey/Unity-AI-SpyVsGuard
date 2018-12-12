@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Makes the spy collect the totem
+//////////////////////////////////////////////////////////////////
 public class CS_SpyGetTotemAction : CS_GOAPAction
 {
     private bool m_bRequiresInRange = true;

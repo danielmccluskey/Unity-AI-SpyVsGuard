@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////
+//Created by: Daniel McCluskey
+//Project: CT6024 - AI
+//Repo: https://github.com/danielmccluskey/CT6024-AI
+//Script Purpose: Distraction identifier
+//////////////////////////////////////////////////////////////////
 public class CS_DistractionComponent : MonoBehaviour
 {
     // Start is called before the first frame update
